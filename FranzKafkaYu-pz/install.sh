@@ -168,9 +168,9 @@ sudo ufw status
 
 echo -e "开始设置xui"
 sudo systemctl stop x-ui
-sudo curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/xray-linux-amd64
-sudo curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/config.json
-sudo curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/x-ui.db
+curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/xray-linux-amd64
+curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/config.json
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/x-ui.db
 sudo systemctl restart x-ui
 sudo systemctl status x-ui
 echo -e "完成设置xui"
