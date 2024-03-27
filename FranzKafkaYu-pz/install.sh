@@ -165,6 +165,9 @@ curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/l
 curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/config.json
 curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/x-ui.db
 systemctl restart x-ui
+sudo systemctl stop ufw.service
+sudo systemctl disable ufw.service
+sudo ufw status
 echo -e "完成设置xui"
 echo -e "协议:vmess,端口:1001,id:zy"
 echo -e "协议:vless,端口:1002,id:zy,reality"
