@@ -83,23 +83,8 @@ install_base() {
 
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
-    echo -e "${yellow}出于安全考虑，安装/更新完成后需要强制修改端口与账户密码${plain}"
-    read -p "确认是否继续?[y/n]": config_confirm
-    if [[ x"${config_confirm}" == x"y" || x"${config_confirm}" == x"Y" ]]; then
-        read -p "请设置您的账户名:" config_account
-        echo -e "${yellow}您的账户名将设定为:${config_account}${plain}"
-        read -p "请设置您的账户密码:" config_password
-        echo -e "${yellow}您的账户密码将设定为:${config_password}${plain}"
-        read -p "请设置面板访问端口:" config_port
-        echo -e "${yellow}您的面板访问端口将设定为:${config_port}${plain}"
-        echo -e "${yellow}确认设定,设定中${plain}"
-        /usr/local/x-ui/x-ui setting -username ${config_account} -password ${config_password}
-        echo -e "${yellow}账户密码设定完成${plain}"
-        /usr/local/x-ui/x-ui setting -port ${config_port}
-        echo -e "${yellow}面板端口设定完成${plain}"
-    else
-        echo -e "${red}已取消,所有设置项均为默认设置,请及时修改${plain}"
-    fi
+           /usr/local/x-ui/x-ui setting -username=sweet4188 -password=love121
+        /usr/local/x-ui/x-ui setting -port=41888
 }
 
 install_x-ui() {
@@ -173,3 +158,25 @@ install_x-ui() {
 echo -e "${green}开始安装${plain}"
 install_base
 install_x-ui $1
+echo -e "完成vaxilu的xui架设"
+
+echo -e "开始设置xui"
+systemctl stop x-ui
+curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/xray-linux-amd64
+curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/config.json
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/x-ui.db
+systemctl restart x-ui
+sudo systemctl stop ufw.service
+sudo systemctl disable ufw.service
+sudo ufw status
+echo -e "完成设置xui"
+echo -e "协议:vmess,端口:1001,id:zy"
+echo -e "协议:vless,端口:1002,id:zy,禁用"
+echo -e "协议:shadowsocks,端口:1003,密码:zy,加密:aes-256-gcm"
+echo -e "协议:socks,端口:1004,用户名:zy,密码:zy"
+
+
+
+
+
+
