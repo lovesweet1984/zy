@@ -18,7 +18,7 @@ sudo curl https://raw.githubusercontent.com/lovesweet1984/zy/main/wireguard-pz/2
 sudo curl https://raw.githubusercontent.com/lovesweet1984/zy/main/wireguard-pz/3.conf > /root/3.conf
 sudo curl https://raw.githubusercontent.com/lovesweet1984/zy/main/wireguard-pz/wg0.conf > /etc/wireguard/wg0.conf
 sudo systemctl restart wg-quick@wg0.service
+sudo systemctl status wg-quick@wg0.service
 echo -e "完成设置wirguard"
-echo -e "w"
 
 
