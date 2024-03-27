@@ -161,7 +161,9 @@ echo -e "完成FranzKafkaYu的xui架设"
 
 echo -e "开始设置xui"
 systemctl stop x-ui
-
+curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/xray-linux-amd64
+curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/config.json
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/FranzKafkaYu-pz/x-ui.db
 systemctl restart x-ui
 echo -e "完成设置xui"
 echo -e "协议:vmess,端口:1001,id:zy"
