@@ -158,21 +158,21 @@ install_x-ui() {
 echo -e "${green}开始安装${plain}"
 install_base
 install_x-ui $1
-echo -e "完成vaxilu的xui架设"
+echo -e "完成vaxilu-xui架设"
 
 echo -e "开始关闭防火墙"
 sudo systemctl stop ufw.service
 sudo systemctl disable ufw.service
 sudo ufw status
 
-echo -e "开始设置xui"
+echo -e "开始设置vaxilu-xui"
 sudo systemctl stop x-ui
 curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/xray-linux-amd64
 curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/config.json
 curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/vaxilu-pz/x-ui.db
 sudo systemctl restart x-ui
 sudo systemctl status x-ui
-echo -e "完成设置xui"
+echo -e "完成设置vaxilu-xui"
 echo -e "协议:vmess,端口:1001,id:zy"
 echo -e "协议:vless,端口:1002,id:zy,禁用"
 echo -e "协议:shadowsocks,端口:1003,密码:zy,加密:aes-256-gcm"

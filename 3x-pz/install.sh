@@ -196,10 +196,14 @@ sudo systemctl stop ufw.service
 sudo systemctl disable ufw.service
 sudo ufw status
 
-echo -e "开始设置xui"
+echo -e "开始设置3x-xui"
 x-ui stop
-curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3xui-pz/x-ui.db
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/x-ui.db
 x-ui start
-
+echo -e "完成设置3x-xui"
+echo -e "协议:vmess,端口:1001,id:zy"
+echo -e "协议:vless,端口:1002,id:zy,reality,SNI:www.speedtest.net,公钥:Z3ZGnAOdKkzJ07gR_7_0k9_iTTFP6paDOrqx1rN2LU4"
+echo -e "协议:shadowsocks,端口:1003,密码:zy,加密:aes-256-gcm"
+echo -e "协议:socks,端口:1004,用户名:zy,密码:zy"
 
 
