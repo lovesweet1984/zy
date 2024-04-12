@@ -161,5 +161,7 @@ curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/m
 curl -o /root/bing/private.key https://raw.githubusercontent.com/lovesweet1984/zy/main/sui-pz/bing/private.key
 curl -o /usr/local/s-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/sui-pz/config.json
 curl -o /usr/local/s-ui/db/s-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/sui-pz/s-ui.db
+s-ui start
+s-ui status
 echo -e "完成设置s-ui"
 
