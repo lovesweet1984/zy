@@ -1,0 +1,179 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "dns": {},
+  "ntp": null,
+  "inbounds": [
+    {
+      "type": "vmess",
+      "users": [
+        {
+          "name": "zy",
+          "uuid": "zy",
+          "alterId": 0
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "certificate_path": "/root/bing/cert.crt",
+        "key_path": "/root/bing/private.key",
+        "server_name": "www.bing.com"
+      },
+      "multiplex": {},
+      "transport": {
+        "type": "ws",
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "path": "/zyzy"
+      },
+      "tag": "in-1001",
+      "listen": "::",
+      "listen_port": 1001
+    },
+    {
+      "type": "vless",
+      "users": [
+        {
+          "name": "zy",
+          "uuid": "zy"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "certificate_path": "/root/bing/cert.crt",
+        "key_path": "/root/bing/private.key"
+      },
+      "multiplex": {},
+      "transport": {
+        "type": "ws",
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "path": "/zyzy"
+      },
+      "tag": "in-1002",
+      "listen": "::",
+      "listen_port": 1002
+    },
+    {
+      "type": "shadowsocks",
+      "method": "aes-256-gcm",
+      "multiplex": {},
+      "tag": "in-1003",
+      "listen": "::",
+      "listen_port": 1003,
+      "password": "zy",
+      "users": [
+        {
+          "name": "zy",
+          "password": "zy"
+        }
+      ]
+    },
+    {
+      "type": "socks",
+      "tag": "in-1004",
+      "listen": "::",
+      "listen_port": 1004,
+      "users": [
+        {
+          "username": "zy",
+          "password": "zy"
+        }
+      ]
+    },
+    {
+      "type": "hysteria2",
+      "users": [
+        {
+          "name": "zy",
+          "password": "zy"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "certificate_path": "/root/bing/cert.crt",
+        "key_path": "/root/bing/private.key"
+      },
+      "tag": "in-1005",
+      "listen": "::",
+      "listen_port": 1005,
+      "ignore_client_bandwidth": false
+    },
+    {
+      "type": "trojan",
+      "users": [
+        {
+          "name": "zy",
+          "password": "zy"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "certificate_path": "/root/bing/cert.crt",
+        "key_path": "/root/bing/private.key",
+        "server_name": "www.bing.com"
+      },
+      "multiplex": {},
+      "transport": {
+        "type": "ws",
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "path": "/zyzy"
+      },
+      "tag": "in-1006",
+      "listen": "::",
+      "listen_port": 1006
+    },
+    {
+      "type": "tuic",
+      "users": [
+        {
+          "name": "zy",
+          "uuid": "6ece1db6-8093-4ded-8265-9b9a03d6d38e",
+          "password": "zy"
+        }
+      ],
+      "congestion_control": "bbr",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "certificate_path": "/root/bing/cert.crt",
+        "key_path": "/root/bing/private.key"
+      },
+      "tag": "in-1007",
+      "listen": "::",
+      "listen_port": 1007
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      }
+    ]
+  },
+  "experimental": {
+    "v2ray_api": {
+      "listen": "127.0.0.1:1080",
+      "stats": {
+        "enabled": true,
+        "inbounds": [],
+        "outbounds": [
+          "direct"
+        ],
+        "users": []
+      }
+    }
+  }
+}
