@@ -2,7 +2,7 @@
 
 remove_all
 startbbrfqpie
-reboot
+
 
 
 #卸载全部加速
