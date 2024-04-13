@@ -1,8 +1,8 @@
 #!/bin/bash
 
-remove_all
-installbbrplus
-startbbrplus
+remove_all()
+installbbrplus()
+startbbrplus()
 reboot
 
 
