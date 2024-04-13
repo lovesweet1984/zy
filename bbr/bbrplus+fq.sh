@@ -79,65 +79,40 @@ remove_all() {
 
 
 
-#安装BBRplus内核 4.14.129
-installbbrplus() {
-  kernel_version="4.14.160-bbrplus"
-  bit=$(uname -m)
-  rm -rf bbrplus
-  mkdir bbrplus && cd bbrplus || exit
-  if [[ "${OS_type}" == "CentOS" ]]; then
-    if [[ ${version} == "7" ]]; then
-      if [[ ${bit} == "x86_64" ]]; then
-        kernel_version="4.14.129_bbrplus"
-        detele_kernel_head
-        headurl=https://github.com/cx9208/Linux-NetSpeed/raw/master/bbrplus/centos/7/kernel-headers-4.14.129-bbrplus.rpm
-        imgurl=https://github.com/cx9208/Linux-NetSpeed/raw/master/bbrplus/centos/7/kernel-4.14.129-bbrplus.rpm
-
-        headurl=$(check_cn $headurl)
-        imgurl=$(check_cn $imgurl)
-
-        download_file $headurl kernel-headers-c7.rpm
-        download_file $imgurl kernel-c7.rpm
-        yum install -y kernel-c7.rpm
-        yum install -y kernel-headers-c7.rpm
-      else
-        echo -e "${Error} 不支持x86_64以外的系统 !" && exit 1
-      fi
-    fi
-
-  elif [[ "${OS_type}" == "Debian" ]]; then
-    if [[ ${bit} == "x86_64" ]]; then
-      kernel_version="4.14.129-bbrplus"
-      detele_kernel_head
-      headurl=https://github.com/cx9208/Linux-NetSpeed/raw/master/bbrplus/debian-ubuntu/x64/linux-headers-4.14.129-bbrplus.deb
-      imgurl=https://github.com/cx9208/Linux-NetSpeed/raw/master/bbrplus/debian-ubuntu/x64/linux-image-4.14.129-bbrplus.deb
-
-      headurl=$(check_cn $headurl)
-      imgurl=$(check_cn $imgurl)
-
-      wget -O linux-headers.deb $headurl
-      wget -O linux-image.deb $imgurl
-
-      dpkg -i linux-image.deb
-      dpkg -i linux-headers.deb
-    else
-      echo -e "${Error} 不支持x86_64以外的系统 !" && exit 1
-    fi
-  fi
-
-  cd .. && rm -rf bbrplus
-  BBR_grub
-  echo -e "${Tip} 内核安装完毕，请参考上面的信息检查是否安装成功,默认从排第一的高版本内核启动"
-  check_kernel
+#安装BBRplus内核
+installbbrplus(){
+	kernel_version="4.14.129-bbrplus"
+	if [[ "${release}" == "centos" ]]; then
+		wget -N --no-check-certificate https://${github}/bbrplus/${release}/${version}/kernel-${kernel_version}.rpm
+		yum install -y kernel-${kernel_version}.rpm
+		rm -f kernel-${kernel_version}.rpm
+		kernel_version="4.14.129_bbrplus" #fix a bug
+	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
+		mkdir bbrplus && cd bbrplus
+		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
+		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-image-${kernel_version}.deb
+		dpkg -i linux-headers-${kernel_version}.deb
+		dpkg -i linux-image-${kernel_version}.deb
+		cd .. && rm -rf bbrplus
+	fi
+	detele_kernel
+	BBR_grub
+	echo -e "${Tip} 重启VPS后，请重新运行脚本开启${Red_font_prefix}BBRplus${Font_color_suffix}"
+	stty erase '^H' && read -p "需要重启VPS后，才能开启BBRplus，是否现在重启 ? [Y/n] :" yn
+	[ -z "${yn}" ] && yn="y"
+	if [[ $yn == [Yy] ]]; then
+		echo -e "${Info} VPS 重启中..."
+		reboot
+	fi
 }
 
+
 #启用BBRplus
-startbbrplus() {
-  remove_bbr_lotserver
-  echo "net.core.default_qdisc=fq" >>/etc/sysctl.d/99-sysctl.conf
-  echo "net.ipv4.tcp_congestion_control=bbrplus" >>/etc/sysctl.d/99-sysctl.conf
-  sysctl --system
-  echo -e "${Info}BBRplus修改成功，重启生效！"
+startbbrplus(){
+	echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+	echo "net.ipv4.tcp_congestion_control=bbrplus" >> /etc/sysctl.conf
+	sysctl -p
+	echo -e "${Info}BBRplus启动成功！"
 }
 
 remove_all
