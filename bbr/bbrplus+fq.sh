@@ -1,11 +1,5 @@
 #!/bin/bash
 
-remove_all()
-installbbrplus()
-startbbrplus()
-reboot
-
-
 #卸载全部加速
 remove_all() {
   rm -rf /etc/sysctl.d/*.conf
@@ -146,4 +140,8 @@ startbbrplus() {
   echo -e "${Info}BBRplus修改成功，重启生效！"
 }
 
+remove_all
+installbbrplus
+startbbrplus
+reboot
 

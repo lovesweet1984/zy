@@ -1,10 +1,5 @@
 #!/bin/bash
 
-remove_all
-startbbrfqpie
-
-
-
 #卸载全部加速
 remove_all() {
   rm -rf /etc/sysctl.d/*.conf
@@ -92,3 +87,12 @@ startbbrfqpie() {
   sysctl --system
   echo -e "${Info}BBR+FQ_PIE修改成功，重启生效！"
 }
+
+
+remove_all
+startbbrfqpie
+reboot
+
+
+
+
