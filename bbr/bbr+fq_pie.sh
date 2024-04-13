@@ -2,7 +2,6 @@
 
 
 #卸载全部加速
-remove_all() {
   rm -rf /etc/sysctl.d/*.conf
   #rm -rf /etc/sysctl.conf
   #touch /etc/sysctl.conf
@@ -76,17 +75,14 @@ remove_all() {
   clear
   echo -e "${Info}:清除加速完成。"
   sleep 1s
-}
 
 
 
 #启用BBR+fq_pie
-startbbrfqpie() {
   remove_bbr_lotserver
   echo "net.core.default_qdisc=fq_pie" >>/etc/sysctl.d/99-sysctl.conf
   echo "net.ipv4.tcp_congestion_control=bbr" >>/etc/sysctl.d/99-sysctl.conf
   sysctl --system
   echo -e "${Info}BBR+FQ_PIE修改成功，重启生效！"
-}
   reboot
   
