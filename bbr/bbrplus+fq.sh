@@ -97,13 +97,6 @@ installbbrplus(){
 	fi
 	detele_kernel
 	BBR_grub
-	echo -e "${Tip} 重启VPS后，请重新运行脚本开启${Red_font_prefix}BBRplus${Font_color_suffix}"
-	stty erase '^H' && read -p "需要重启VPS后，才能开启BBRplus，是否现在重启 ? [Y/n] :" yn
-	[ -z "${yn}" ] && yn="y"
-	if [[ $yn == [Yy] ]]; then
-		echo -e "${Info} VPS 重启中..."
-		reboot
-	fi
 }
 
 
