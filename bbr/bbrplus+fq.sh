@@ -77,6 +77,61 @@ remove_all() {
   sleep 1s
 }
 
+#删除多余内核
+detele_kernel(){
+	if [[ "${release}" == "centos" ]]; then
+		rpm_total=`rpm -qa | grep kernel | grep -v "${kernel_version}" | grep -v "noarch" | wc -l`
+		if [ "${rpm_total}" > "1" ]; then
+			echo -e "检测到 ${rpm_total} 个其余内核，开始卸载..."
+			for((integer = 1; integer <= ${rpm_total}; integer++)); do
+				rpm_del=`rpm -qa | grep kernel | grep -v "${kernel_version}" | grep -v "noarch" | head -${integer}`
+				echo -e "开始卸载 ${rpm_del} 内核..."
+				rpm --nodeps -e ${rpm_del}
+				echo -e "卸载 ${rpm_del} 内核卸载完成，继续..."
+			done
+			echo --nodeps -e "内核卸载完毕，继续..."
+		else
+			echo -e " 检测到 内核 数量不正确，请检查 !" && exit 1
+		fi
+	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
+		deb_total=`dpkg -l | grep linux-image | awk '{print $2}' | grep -v "${kernel_version}" | wc -l`
+		if [ "${deb_total}" > "1" ]; then
+			echo -e "检测到 ${deb_total} 个其余内核，开始卸载..."
+			for((integer = 1; integer <= ${deb_total}; integer++)); do
+				deb_del=`dpkg -l|grep linux-image | awk '{print $2}' | grep -v "${kernel_version}" | head -${integer}`
+				echo -e "开始卸载 ${deb_del} 内核..."
+				apt-get purge -y ${deb_del}
+				echo -e "卸载 ${deb_del} 内核卸载完成，继续..."
+			done
+			echo -e "内核卸载完毕，继续..."
+		else
+			echo -e " 检测到 内核 数量不正确，请检查 !" && exit 1
+		fi
+	fi
+}
+
+#更新引导
+BBR_grub(){
+	if [[ "${release}" == "centos" ]]; then
+        if [[ ${version} = "6" ]]; then
+            if [ ! -f "/boot/grub/grub.conf" ]; then
+                echo -e "${Error} /boot/grub/grub.conf 找不到，请检查."
+                exit 1
+            fi
+            sed -i 's/^default=.*/default=0/g' /boot/grub/grub.conf
+        elif [[ ${version} = "7" ]]; then
+            if [ ! -f "/boot/grub2/grub.cfg" ]; then
+                echo -e "${Error} /boot/grub2/grub.cfg 找不到，请检查."
+                exit 1
+            fi
+            grub2-set-default 0
+        fi
+    elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
+        /usr/sbin/update-grub
+    fi
+}
+
+
 
 
 #安装BBRplus内核
