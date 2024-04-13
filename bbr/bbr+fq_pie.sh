@@ -81,7 +81,6 @@ remove_all() {
 
 #启用BBR+fq_pie
 startbbrfqpie() {
-  remove_bbr_lotserver
   echo "net.core.default_qdisc=fq_pie" >>/etc/sysctl.d/99-sysctl.conf
   echo "net.ipv4.tcp_congestion_control=bbr" >>/etc/sysctl.d/99-sysctl.conf
   sysctl --system
