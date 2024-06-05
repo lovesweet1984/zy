@@ -207,12 +207,11 @@ curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/mai
 x-ui start
 
 echo -e "完成设置3x-xui"
-echo -e "wireguard:端口1001"
-echo -e "shadowsocks:端口1002,密码zy,加密AES_256_GCM,tcp"
-echo -e "sock5:端口1003,用户名zy,密码zy"
-echo -e "vmess:端口1004,密码zy,ws+tls"
-echo -e "vless:端口1005,密码zy,tcp+tls"
-echo -e "trojan:端口1006,密码zy,grpc+tls"
-echo -e "wireguard中转:端口40001-40020"
-
+echo -e "协议:wireguard,端口:1001,Interface PrivateKey:+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=,Peer PublicKey:ydgIKaGv4lg1S0LUcoQlo4UxpGhWRzZIZJEVpwnRJS4=,Address:10.7.0.2/32"
+echo -e "协议:shadowsocks, 端口:1002,密码:zy,加密AES_256_GCM,传输:tcp"
+echo -e "协议:sock5, 端口:1003,用户名:zy,密码:zy"
+echo -e "协议:vmess, 端口:1004,id:zy,传输:ws+tls"
+echo -e "协议:vless,端口:1005,密码:zy,传输:tcp+tls"
+echo -e "协议:trojan,端口:1006,密码:zy,传输:grpc+tls"
+echo -e "协议:wireguard:中转进站端口:40001-40020"
 
