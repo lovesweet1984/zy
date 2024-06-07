@@ -32,6 +32,35 @@
       {
         "type": "field",
         "domain": [
+          "cip.cc"
+        ],
+        "inboundTag": [
+          "inbound-40001",
+          "inbound-40002",
+          "inbound-40003",
+          "inbound-40004",
+          "inbound-40005",
+          "inbound-40006",
+          "inbound-40007",
+          "inbound-40008",
+          "inbound-40009",
+          "inbound-40010",
+          "inbound-40011",
+          "inbound-40012",
+          "inbound-40013",
+          "inbound-40014",
+          "inbound-40015",
+          "inbound-40016",
+          "inbound-40017",
+          "inbound-40018",
+          "inbound-40019",
+          "inbound-40020"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
           "whoer.com",
           "geosite:google",
           "google.com",
@@ -1538,12 +1567,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_2",
-                "pass": "xRGcex"
+                "user": "luckzy01_area-JP_city-Minatoku_session-luckzy01_life-15",
+                "pass": "111111"
               }
             ]
           }
@@ -1556,12 +1585,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "76.kookeey.info",
+            "port": 9027,
             "users": [
               {
-                "user": "roger1989_3",
-                "pass": "xRGcex"
+                "user": "54216fe5",
+                "pass": "647a599f"
               }
             ]
           }
