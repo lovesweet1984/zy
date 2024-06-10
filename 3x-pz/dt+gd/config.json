@@ -32,7 +32,7 @@
       {
         "type": "field",
         "domain": [
-          "cip.cc"
+          "ip.sb"
         ],
         "inboundTag": [
           "inbound-40001",
