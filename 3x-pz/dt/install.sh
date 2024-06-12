@@ -224,6 +224,6 @@ echo -e "综合检测网站:chaip.org和ip.skk.moe, 可以检测出各个链接�
 echo -e "dt+gd模式下:"
 echo -e "ROS上设置CN分流规则-cip.cc和speedtest.cn走国内本地,如果设置全部流量入站就走中转到固定"
 echo -e "XRAY规则指定域名-ip.sb和whoer.com走中转直连"
-echo -e "XRAY无需设置规则-所有入站流量和ip.fm和ip-api.com和browserscan.net和yalala.com走中转固定"
+echo -e "XRAY无需设置规则-所有入站流量和ip.fm和ip-api.com和browserscan.net和yalala.com走中转到固定"
 echo -e "XRAY规则指定域名-ip.me和whoer.net和ipinfo.io和google.com走中转到动态"
 echo -e "综合检测网站:chaip.org和ip.skk.moe, 可以检测出各个链接线路"
