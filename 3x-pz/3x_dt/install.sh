@@ -199,11 +199,11 @@ sudo ufw status
 echo -e "开始设置3x-xui的dt模式"
 x-ui stop
 mkdir /root/bing
-curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/dt/bing/cert.crt
-curl -o /root/bing/private.key https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/dt/bing/private.key
-curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/dt/config.json
-curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/dt/xray-linux-amd64
-curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/dt/x-ui.db
+curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt/bing/cert.crt
+curl -o /root/bing/private.key https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt/bing/private.key
+curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt/config.json
+curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt/xray-linux-amd64
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt/x-ui.db
 x-ui start
 
 echo -e "完成设置3x-xui的dt模式"
