@@ -196,7 +196,7 @@ sudo systemctl stop ufw.service
 sudo systemctl disable ufw.service
 sudo ufw status
 
-echo -e "开始设置3x-xui的dt+gd模式"
+echo -e "开始设置3x-xui的3x_dt+gd模式"
 x-ui stop
 mkdir /root/bing
 curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt+gd/bing/cert.crt
@@ -206,7 +206,7 @@ curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/l
 curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt+gd/x-ui.db
 x-ui start
 
-echo -e "完成设置3x-xui的dt+gd模式"
+echo -e "完成设置3x-xui的3x_dt+gd模式"
 echo -e "协议:wireguard,端口:1001,Interface PrivateKey:+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=,Peer PublicKey:ydgIKaGv4lg1S0LUcoQlo4UxpGhWRzZIZJEVpwnRJS4=,Address:10.7.0.2/32"
 echo -e "协议:shadowsocks, 端口:1002,密码:zy,加密AES_256_GCM,传输:tcp"
 echo -e "协议:sock5, 端口:1003,用户名:zy,密码:zy"
@@ -215,15 +215,15 @@ echo -e "协议:vless,端口:1005,密码:zy,传输:tcp+tls"
 echo -e "协议:trojan,端口:1006,密码:zy,传输:grpc+tls"
 echo -e "协议:wireguard:中转进站端口:40001-40020"
 
-echo -e "dt模式下:"
-echo -e "ROS上设置CN分流规则-cip.cc和speedtest.cn走国内本地,如果设置全部流量入站就走中转直连"
-echo -e "XRAY无需设置规则-所有入站流量(ip.sb和whoer.com和ip.fm和ip-api.combrowserscan.net)走中转直连"
-echo -e "XRAY规则指定域名-ip.me和whoer.net和ipinfo.io和google.com走中转到动态"
-echo -e "综合检测网站:ip.skk.moe和chaip.org, 可以检测出各个链接线路"
-
-echo -e "dt+gd模式下:"
+echo -e "3x_dt+gd模式下:"
 echo -e "ROS上设置CN分流规则-cip.cc和speedtest.cn走国内本地,如果设置全部流量入站就走中转到固定"
-echo -e "XRAY规则指定域名-ip.sb和whoer.com走中转直连"
-echo -e "XRAY无需设置规则-所有入站流量和ip.fm和ip-api.com和browserscan.net和yalala.com走中转到固定"
-echo -e "XRAY规则指定域名-ip.me和whoer.net和ipinfo.io和google.com走中转到动态"
-echo -e "综合检测网站:ip.skk.moe和chaip.org, 可以检测出各个链接线路"
+echo -e "XRAY规则指定域名-ip.sb走中转直连"
+echo -e "XRAY规则指定域名-ip.fm和ipinfo.io和google.com走中转到动态"
+echo -e "XRAY无需设置规则-所有入站流量和ip.me和ip-api.com走中转到固定"
+
+echo -e "综合检测网站:ip.skk.moe, 可以检测出各个链接线路, 测试结果如下"
+echo -e "speedtest.cn走国内本地"
+echo -e "ip.sb走中转直连"
+echo -e "ip-api.com走中转到固定"
+echo -e "sukka IPDB走中转到固定"
+echo -e "ipinfo.io走中转到动态"

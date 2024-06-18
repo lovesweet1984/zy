@@ -32,8 +32,7 @@
       {
         "type": "field",
         "domain": [
-          "ip.sb",
-          "whoer.com"
+          "ip.sb"
         ],
         "inboundTag": [
           "inbound-40001",
@@ -62,9 +61,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -90,9 +89,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -118,9 +117,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -146,9 +145,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -174,9 +173,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -202,9 +201,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -230,9 +229,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -258,9 +257,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -286,9 +285,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -314,9 +313,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -342,9 +341,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -370,9 +369,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -398,9 +397,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -426,9 +425,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -454,9 +453,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -482,9 +481,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -510,9 +509,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -538,9 +537,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -566,9 +565,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -594,9 +593,9 @@
       {
         "type": "field",
         "domain": [
-          "ip.me",
-          "whoer.net",
+          "ip.fm",
           "ipinfo.io",
+          "smartproxy.cn",
           "google.com",
           "accounts.google.com",
           "mail.google.com",
@@ -1582,7 +1581,7 @@
       "tag": "direct",
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "AsIs"
+        "domainStrategy": "UseIP"
       }
     },
     {
@@ -1596,12 +1595,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_1",
-                "pass": "xRGcex"
+                "user": "cyq4123_area-JP_life-30_session-UAqnpfLHfd",
+                "pass": "cyq4123"
               }
             ]
           }
@@ -1614,12 +1613,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_2",
-                "pass": "xRGcex"
+                "user": "cyq4123_area-JP_life-30_session-XpQ2fphrq5",
+                "pass": "cyq4123"
               }
             ]
           }
@@ -1632,12 +1631,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_3",
-                "pass": "xRGcex"
+                "user": "cyq4123_area-JP_life-30_session-LuSgufLKgi",
+                "pass": "cyq4123"
               }
             ]
           }
@@ -1650,12 +1649,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_4",
-                "pass": "xRGcex"
+                "user": "cyq4123_area-JP_life-30_session-YFbBUIRSUV",
+                "pass": "cyq4123"
               }
             ]
           }
@@ -1668,12 +1667,12 @@
       "settings": {
         "servers": [
           {
-            "address": "proxy.socks5.io",
-            "port": 3009,
+            "address": "as.smartproxycn.com",
+            "port": 1000,
             "users": [
               {
-                "user": "roger1989_5",
-                "pass": "xRGcex"
+                "user": "cyq4123_area-JP_life-30_session-5KVWYX6gZj",
+                "pass": "cyq4123"
               }
             ]
           }
@@ -1687,7 +1686,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "roger1989_6",
@@ -1705,7 +1704,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "roger1989_7",
@@ -1723,7 +1722,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "roger1989_8",
@@ -1741,7 +1740,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "roger1989_9",
@@ -1759,7 +1758,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "roger1989_10",
@@ -1777,7 +1776,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1795,7 +1794,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1813,7 +1812,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1831,7 +1830,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1849,7 +1848,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1867,7 +1866,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1885,7 +1884,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1903,7 +1902,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1921,7 +1920,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1939,7 +1938,7 @@
         "servers": [
           {
             "address": "proxy.socks5.io",
-            "port": 3009,
+            "port": 3333,
             "users": [
               {
                 "user": "自己设置",
@@ -1970,25 +1969,20 @@
     },
     {
       "tag": "出站-固定-02-",
-      "protocol": "shadowsocks",
+      "protocol": "socks",
       "settings": {
         "servers": [
           {
-            "address": "47.245.96.51",
-            "port": 1002,
-            "password": "zy",
-            "method": "aes-256-gcm"
+            "address": "154.222.203.123",
+            "port": 64541,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
           }
         ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
       }
     },
     {
