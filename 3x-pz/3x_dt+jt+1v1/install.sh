@@ -224,17 +224,14 @@ echo -e "20011走动态和20012走静态到20091走动态和20092走静态"
 echo -e "30011走动态和30012走静态到30091走动态和30092走静态"
 echo -e "40011走动态和40012走静态到40091走动态和40092走静态"
 
-echo -e "ROS上设置分流, 设置不同域名走不同的进站对应不同的出站"
+echo -e "ROS上设置域名分流"
 echo -e "走中转到动态的域名有：google.com和ip.fm和ipinfo.io和smartproxy.cn"
 echo -e "走中转到静态的域名有：ip.me和ip-api.com和ip.skk.moe和tiktok.com和moyunteng.com"
 
-echo -e "综合检测网站:ip.skk.moe, 可以检测出各个链接线路, 测试结果如下"
-echo -e "speedtest.cn走国内本地"
-echo -e "ip.sb走国内本地"
-echo -e "ip-api.com走中转到固定"
-echo -e "sukka IPDB走中转到固定"
-echo -e "ipinfo.io走中转到动态"
+echo -e "ROS层面不做任何分流"
+echo -e "走中转到动态的域名有：全部流量（google.com和ip.fm和ipinfo.io和smartproxy.cn）"
+echo -e "走中转到静态的域名有：全部流量（ip.me和ip-api.com和ip.skk.moe和tiktok.com和moyunteng.com）"
 
-echo -e "或者全部流量进来，用ROS命令控制目前走什么线路。。。。"
+echo -e "综合检测网站:ip.skk.moe, 可以检测出各个链接线路"
 
 

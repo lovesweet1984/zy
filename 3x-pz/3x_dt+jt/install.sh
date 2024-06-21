@@ -219,6 +219,8 @@ echo -e "协议:trojan,端口:1006,密码:zy,传输:grpc+tls"
 
 echo -e "3x-xui的3x_dt+jt模式下:"
 echo -e "协议:wireguard, 中转进站端口:40001-40020"
+
+echo -e "ROS上设置域名分流, 然后在xray上也设置域名分流"
 echo -e "ROS上设置CN分流规则-cip.cc和speedtest.cn走国内本地,如果设置全部流量入站就走中转到固定"
 echo -e "走中转直连的域名有：ip.sb"
 echo -e "走中转到动态的域名有：ip.fm和ipinfo.io和google.com和smartproxy.cn"
