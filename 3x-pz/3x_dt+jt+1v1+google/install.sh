@@ -197,7 +197,7 @@ sudo systemctl disable ufw.service
 sudo ufw status
 echo -e "完成关闭防火墙"
 
-echo -e "开始设置3x-xui的3x_dt+jt+1v1模式"
+echo -e "开始设置3x-xui的3x_dt+jt+1v1+google模式"
 x-ui stop
 mkdir /root/bing
 curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt+jt+1v1+google/bing/cert.crt
@@ -206,9 +206,9 @@ curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesw
 curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt+jt+1v1+google/xray-linux-amd64
 curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_dt+jt+1v1+google/x-ui.db
 x-ui start
-echo -e "完成设置3x-xui的3x_dt+jt+1v1模式"
+echo -e "完成设置3x-xui的3x_dt+jt+1v1+google模式"
 
-echo -e "3x-xui的3x_dt+jt+1v1模式下各种协议"
+echo -e "3x-xui的3x_dt+jt+1v1+google模式下各种协议"
 echo -e "协议:wireguard,端口:1001,Interface PrivateKey:+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=,Peer PublicKey:ydgIKaGv4lg1S0LUcoQlo4UxpGhWRzZIZJEVpwnRJS4=,Address:10.7.0.2/32"
 echo -e "协议:shadowsocks, 端口:1002,密码:zy,加密AES_256_GCM,传输:tcp"
 echo -e "协议:sock5,端口:1003,用户名:zy,密码:zy"
