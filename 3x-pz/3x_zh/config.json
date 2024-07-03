@@ -1,0 +1,6743 @@
+{
+  "log": {
+    "access": "none",
+    "dnsLog": false,
+    "error": "./error.log",
+    "loglevel": "warning"
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api"
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "ip": [
+          "geoip:private"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ]
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10011",
+          "inbound-10013"
+        ],
+        "outboundTag": "10011和10013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10011",
+          "inbound-10013"
+        ],
+        "outboundTag": "10011和10013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10012",
+          "inbound-10013"
+        ],
+        "outboundTag": "10012和10013-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10021",
+          "inbound-10023"
+        ],
+        "outboundTag": "10021和10023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10021",
+          "inbound-10023"
+        ],
+        "outboundTag": "10021和10023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10022",
+          "inbound-10023"
+        ],
+        "outboundTag": "10022和10023-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10031",
+          "inbound-10033"
+        ],
+        "outboundTag": "10031和10033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10031",
+          "inbound-10033"
+        ],
+        "outboundTag": "10031和10033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10032",
+          "inbound-10033"
+        ],
+        "outboundTag": "10032和10033-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10041",
+          "inbound-10043"
+        ],
+        "outboundTag": "10041和10043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10041",
+          "inbound-10043"
+        ],
+        "outboundTag": "10041和10043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10042",
+          "inbound-10043"
+        ],
+        "outboundTag": "10042和10043-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10051",
+          "inbound-10053"
+        ],
+        "outboundTag": "10051和10053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10051",
+          "inbound-10053"
+        ],
+        "outboundTag": "10051和10053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10052",
+          "inbound-10053"
+        ],
+        "outboundTag": "10052和10053-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10061",
+          "inbound-10063"
+        ],
+        "outboundTag": "10061和10063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10061",
+          "inbound-10063"
+        ],
+        "outboundTag": "10061和10063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10062",
+          "inbound-10063"
+        ],
+        "outboundTag": "10062和10063-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10071",
+          "inbound-10073"
+        ],
+        "outboundTag": "10071和10073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10071",
+          "inbound-10073"
+        ],
+        "outboundTag": "10071和10073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10072",
+          "inbound-10073"
+        ],
+        "outboundTag": "10072和10073-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10081",
+          "inbound-10083"
+        ],
+        "outboundTag": "10081和10083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10081",
+          "inbound-10083"
+        ],
+        "outboundTag": "10081和10083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10082",
+          "inbound-10083"
+        ],
+        "outboundTag": "10082和10083-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-10091",
+          "inbound-10093"
+        ],
+        "outboundTag": "10091和10093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-10091",
+          "inbound-10093"
+        ],
+        "outboundTag": "10091和10093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-10092",
+          "inbound-10093"
+        ],
+        "outboundTag": "10092和10093-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20011",
+          "inbound-20013"
+        ],
+        "outboundTag": "20011和20013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20011",
+          "inbound-20013"
+        ],
+        "outboundTag": "20011和20013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20012",
+          "inbound-20013"
+        ],
+        "outboundTag": "20012和20013-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20021",
+          "inbound-20023"
+        ],
+        "outboundTag": "20021和20023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20021",
+          "inbound-20023"
+        ],
+        "outboundTag": "20021和20023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20022",
+          "inbound-20023"
+        ],
+        "outboundTag": "20022和20023-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20031",
+          "inbound-20033"
+        ],
+        "outboundTag": "20031和20033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20031",
+          "inbound-20033"
+        ],
+        "outboundTag": "20031和20033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20032",
+          "inbound-20033"
+        ],
+        "outboundTag": "20032和20033-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20041",
+          "inbound-20043"
+        ],
+        "outboundTag": "20041和20043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20041",
+          "inbound-20043"
+        ],
+        "outboundTag": "20041和20043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20042",
+          "inbound-20043"
+        ],
+        "outboundTag": "20042和20043-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20051",
+          "inbound-20053"
+        ],
+        "outboundTag": "20051和20053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20051",
+          "inbound-20053"
+        ],
+        "outboundTag": "20051和20053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20052",
+          "inbound-20053"
+        ],
+        "outboundTag": "20052和20053-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20061",
+          "inbound-20063"
+        ],
+        "outboundTag": "20061和20063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20061",
+          "inbound-20063"
+        ],
+        "outboundTag": "20061和20063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20062",
+          "inbound-20063"
+        ],
+        "outboundTag": "20062和20063-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20071",
+          "inbound-20073"
+        ],
+        "outboundTag": "20071和20073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20071",
+          "inbound-20073"
+        ],
+        "outboundTag": "20071和20073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20072",
+          "inbound-20073"
+        ],
+        "outboundTag": "20072和20073-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20081",
+          "inbound-20083"
+        ],
+        "outboundTag": "20081和20083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20081",
+          "inbound-20083"
+        ],
+        "outboundTag": "20081和20083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20082",
+          "inbound-20083"
+        ],
+        "outboundTag": "20082和20083-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-20091",
+          "inbound-20093"
+        ],
+        "outboundTag": "20091和20093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-20091",
+          "inbound-20093"
+        ],
+        "outboundTag": "20091和20093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-20092",
+          "inbound-20093"
+        ],
+        "outboundTag": "20092和20093-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30011",
+          "inbound-30013"
+        ],
+        "outboundTag": "30011和30013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30011",
+          "inbound-30013"
+        ],
+        "outboundTag": "30011和30013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30012",
+          "inbound-30013"
+        ],
+        "outboundTag": "30012和30013-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30021",
+          "inbound-30023"
+        ],
+        "outboundTag": "30021和30023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30021",
+          "inbound-30023"
+        ],
+        "outboundTag": "30021和30023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30022",
+          "inbound-30023"
+        ],
+        "outboundTag": "30022和30023-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30031",
+          "inbound-30033"
+        ],
+        "outboundTag": "30031和30033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30031",
+          "inbound-30033"
+        ],
+        "outboundTag": "30031和30033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30032",
+          "inbound-30033"
+        ],
+        "outboundTag": "30032和30033-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30041",
+          "inbound-30043"
+        ],
+        "outboundTag": "30041和30043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30041",
+          "inbound-30043"
+        ],
+        "outboundTag": "30041和30043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30042",
+          "inbound-30043"
+        ],
+        "outboundTag": "30042和30043-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30051",
+          "inbound-30053"
+        ],
+        "outboundTag": "30051和30053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30051",
+          "inbound-30053"
+        ],
+        "outboundTag": "30051和30053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30052",
+          "inbound-30053"
+        ],
+        "outboundTag": "30052和30053-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30061",
+          "inbound-30063"
+        ],
+        "outboundTag": "30061和30063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30061",
+          "inbound-30063"
+        ],
+        "outboundTag": "30061和30063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30062",
+          "inbound-30063"
+        ],
+        "outboundTag": "30062和30063-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30071",
+          "inbound-30073"
+        ],
+        "outboundTag": "30071和30073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30071",
+          "inbound-30073"
+        ],
+        "outboundTag": "30071和30073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30072",
+          "inbound-30073"
+        ],
+        "outboundTag": "30072和30073-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30081",
+          "inbound-30083"
+        ],
+        "outboundTag": "30081和30083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30081",
+          "inbound-30083"
+        ],
+        "outboundTag": "30081和30083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30082",
+          "inbound-30083"
+        ],
+        "outboundTag": "30082和30083-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-30091",
+          "inbound-30093"
+        ],
+        "outboundTag": "30091和30093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-30091",
+          "inbound-30093"
+        ],
+        "outboundTag": "30091和30093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-30092",
+          "inbound-30093"
+        ],
+        "outboundTag": "30092和30093-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40011",
+          "inbound-40013"
+        ],
+        "outboundTag": "40011和40013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40011",
+          "inbound-40013"
+        ],
+        "outboundTag": "40011和40013-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40012",
+          "inbound-40013"
+        ],
+        "outboundTag": "40012和40013-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40021",
+          "inbound-40023"
+        ],
+        "outboundTag": "40021和40023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40021",
+          "inbound-40023"
+        ],
+        "outboundTag": "40021和40023-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40022",
+          "inbound-40023"
+        ],
+        "outboundTag": "40022和40023-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40031",
+          "inbound-40033"
+        ],
+        "outboundTag": "40031和40033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40031",
+          "inbound-40033"
+        ],
+        "outboundTag": "40031和40033-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40032",
+          "inbound-40033"
+        ],
+        "outboundTag": "40032和40033-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40041",
+          "inbound-40043"
+        ],
+        "outboundTag": "40041和40043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40041",
+          "inbound-40043"
+        ],
+        "outboundTag": "40041和40043-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40042",
+          "inbound-40043"
+        ],
+        "outboundTag": "40042和40043-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40051",
+          "inbound-40053"
+        ],
+        "outboundTag": "40051和40053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40051",
+          "inbound-40053"
+        ],
+        "outboundTag": "40051和40053-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40052",
+          "inbound-40053"
+        ],
+        "outboundTag": "40052和40053-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40061",
+          "inbound-40063"
+        ],
+        "outboundTag": "40061和40063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40061",
+          "inbound-40063"
+        ],
+        "outboundTag": "40061和40063-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40062",
+          "inbound-40063"
+        ],
+        "outboundTag": "40062和40063-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40071",
+          "inbound-40073"
+        ],
+        "outboundTag": "40071和40073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40071",
+          "inbound-40073"
+        ],
+        "outboundTag": "40071和40073-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40072",
+          "inbound-40073"
+        ],
+        "outboundTag": "40072和40073-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40081",
+          "inbound-40083"
+        ],
+        "outboundTag": "40081和40083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40081",
+          "inbound-40083"
+        ],
+        "outboundTag": "40081和40083-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40082",
+          "inbound-40083"
+        ],
+        "outboundTag": "40082和40083-出站-静态-"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "6.6.6.6",
+          "7.7.7.7"
+        ],
+        "inboundTag": [
+          "inbound-40091",
+          "inbound-40093"
+        ],
+        "outboundTag": "40091和40093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "ip.fm",
+          "ipinfo.io",
+          "smartproxy.cn",
+          "flush.smartproxy.cn",
+          "google.com",
+          "accounts.google.com",
+          "mail.google.com",
+          "www.google.com",
+          "play.googleapis.com",
+          "play.google.com",
+          "play.googleapis.com",
+          "android.clients.google.com",
+          "geosite:google"
+        ],
+        "inboundTag": [
+          "inbound-40091",
+          "inbound-40093"
+        ],
+        "outboundTag": "40091和40093-出站-动态-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "inbound-40092",
+          "inbound-40093"
+        ],
+        "outboundTag": "40092和40093-出站-静态-"
+      }
+    ]
+  },
+  "dns": {
+    "servers": [
+      "1.1.1.1"
+    ],
+    "queryStrategy": "UseIP",
+    "tag": "dns_inbound"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "api",
+      "sniffing": null
+    },
+    {
+      "listen": null,
+      "port": 1001,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-1001",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 1002,
+      "protocol": "shadowsocks",
+      "settings": {
+        "clients": [
+          {
+            "email": "shadowsocks",
+            "method": "aes-256-gcm",
+            "password": "zy"
+          }
+        ],
+        "method": "aes-256-gcm",
+        "network": "tcp,udp",
+        "password": "Iev3xLyVcpcAXGofZHDHpL3pMQg1xM4iP4N92lKKj9A="
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "acceptProxyProtocol": false,
+          "header": {
+            "type": "none"
+          }
+        }
+      },
+      "tag": "inbound-1002",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 1003,
+      "protocol": "socks",
+      "settings": {
+        "auth": "password",
+        "accounts": [
+          {
+            "user": "zy",
+            "pass": "zy"
+          }
+        ],
+        "udp": true,
+        "ip": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "inbound-1003",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 1004,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "email": "vmess",
+            "id": "zy"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "certificates": [
+            {
+              "certificateFile": "/root/bing/cert.crt",
+              "keyFile": "/root/bing/private.key",
+              "ocspStapling": 3600,
+              "oneTimeLoading": false,
+              "usage": "encipherment"
+            }
+          ],
+          "cipherSuites": "",
+          "disableSystemRoot": false,
+          "enableSessionResumption": false,
+          "maxVersion": "1.3",
+          "minVersion": "1.2",
+          "rejectUnknownSni": false,
+          "serverName": "www.bing.com"
+        },
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "headers": {},
+          "host": "",
+          "path": "/zyzy"
+        }
+      },
+      "tag": "inbound-1004",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 1005,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "email": "vless",
+            "flow": "",
+            "id": "zy"
+          }
+        ],
+        "decryption": "none",
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tcpSettings": {
+          "acceptProxyProtocol": false,
+          "header": {
+            "type": "none"
+          }
+        },
+        "tlsSettings": {
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "certificates": [
+            {
+              "certificateFile": "/root/bing/cert.crt",
+              "keyFile": "/root/bing/private.key",
+              "ocspStapling": 3600,
+              "oneTimeLoading": false,
+              "usage": "encipherment"
+            }
+          ],
+          "cipherSuites": "",
+          "disableSystemRoot": false,
+          "enableSessionResumption": false,
+          "maxVersion": "1.3",
+          "minVersion": "1.2",
+          "rejectUnknownSni": false,
+          "serverName": "www.bing.com"
+        }
+      },
+      "tag": "inbound-1005",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 1006,
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "email": "trojan",
+            "flow": "",
+            "password": "zy"
+          }
+        ],
+        "fallbacks": []
+      },
+      "streamSettings": {
+        "grpcSettings": {
+          "authority": "",
+          "multiMode": false,
+          "serviceName": ""
+        },
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "certificates": [
+            {
+              "certificateFile": "/root/bing/cert.crt",
+              "keyFile": "/root/bing/private.key",
+              "ocspStapling": 3600,
+              "oneTimeLoading": false,
+              "usage": "encipherment"
+            }
+          ],
+          "cipherSuites": "",
+          "disableSystemRoot": false,
+          "enableSessionResumption": false,
+          "maxVersion": "1.3",
+          "minVersion": "1.2",
+          "rejectUnknownSni": false,
+          "serverName": "www.bing.com"
+        }
+      },
+      "tag": "inbound-1006",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10011,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10011",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10012,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10012",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10013,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10013",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10021,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10021",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10022,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10022",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10023,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10023",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10031,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10031",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10032,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10032",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10033,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10033",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10041,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10041",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10042,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10042",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10043,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10043",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10051,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10051",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10052,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10052",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10053,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10053",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10061,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10061",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10062,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10062",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10063,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10063",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10071,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10071",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10072,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10072",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10073,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10073",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10081,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10081",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10082,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10082",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10083,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10083",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10091,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10091",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10092,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10092",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 10093,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-10093",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20011,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20011",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20012,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20012",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20013,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20013",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20021,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20021",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20022,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20022",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20023,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20023",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20031,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20031",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20032,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20032",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20033,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20033",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20042,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20042",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20043,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20043",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20051,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20051",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20052,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20052",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20053,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20053",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20061,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20061",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20062,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20062",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20063,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20063",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20071,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20071",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20072,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20072",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20073,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20073",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20081,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20081",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20082,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20082",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20083,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20083",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20091,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20091",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20092,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20092",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20093,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20093",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 20041,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-20041",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30011,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30011",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30012,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30012",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30013,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30013",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30021,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30021",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30022,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30022",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30023,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30023",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30031,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30031",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30032,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30032",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30033,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30033",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30041,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30041",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30042,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30042",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30043,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30043",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30051,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30051",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30052,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30052",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30053,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30053",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30061,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30061",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30062,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30062",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30063,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30063",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30071,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30071",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30072,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30072",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30073,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30073",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30081,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30081",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30082,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30082",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30083,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30083",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30091,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30091",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30092,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30092",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 30093,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-30093",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40011,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40011",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40012,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40012",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40013,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40013",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40021,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40021",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40022,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40022",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40023,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40023",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40031,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40031",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40032,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40032",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40033,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40033",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40041,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40041",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40042,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40042",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40043,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40043",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40051,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40051",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40052,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40052",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40053,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40053",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40061,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40061",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40062,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40062",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40063,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40063",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40071,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40071",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40072,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40072",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40073,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40073",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40081,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40081",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40082,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40082",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40083,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40083",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40091,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40091",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40092,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40092",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    },
+    {
+      "listen": null,
+      "port": 40093,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "inbound-40093",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      }
+    },
+    {
+      "tag": "blocked",
+      "protocol": "blackhole",
+      "settings": {}
+    },
+    {
+      "tag": "10011和10013-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hk.stormip.cn",
+            "port": 1000,
+            "users": [
+              {
+                "user": "storm-cscs001_area-JP_city-OSAKA_session-111111",
+                "pass": "111111"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10012和10013-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "82.117.92.139",
+            "port": 64243,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10021和10023-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hk.stormip.cn",
+            "port": 1000,
+            "users": [
+              {
+                "user": "storm-cscs002_area-JP_city-OSAKA_session-111111",
+                "pass": "111111"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10022和10023-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "45.83.86.180",
+            "port": 63867,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10031和10033-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hk.stormip.cn",
+            "port": 1000,
+            "users": [
+              {
+                "user": "storm-cscs003_area-JP_city-OSAKA_session-111111",
+                "pass": "111111"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10032和10033-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "92.240.214.96",
+            "port": 63885,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10041和10043-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hk.stormip.cn",
+            "port": 1000,
+            "users": [
+              {
+                "user": "storm-cscs004_area-JP_city-OSAKA_session-111111",
+                "pass": "111111"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10042和10043-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "154.222.203.123",
+            "port": 64541,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10051和10053-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hk.stormip.cn",
+            "port": 1000,
+            "users": [
+              {
+                "user": "storm-cscs005_area-JP_city-OSAKA_session-111111",
+                "pass": "111111"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10052和10053-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "82.117.94.71",
+            "port": 62331,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10061和10063-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-VN_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10062和10063-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 1000,
+            "users": [
+              {
+                "user": "自己设置",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10071和10073-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-PH_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10072和10073-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 1000,
+            "users": [
+              {
+                "user": "自己设置",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10081和10083-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-KH_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10082和10083-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 1000,
+            "users": [
+              {
+                "user": "自己设置",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10091和10093-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-TH_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "10092和10093-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 1000,
+            "users": [
+              {
+                "user": "自己设置",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20011和20013-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-BR_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20012和20013-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 1000,
+            "users": [
+              {
+                "user": "自己设置",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20021和20023-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-SA_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20022和20023-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "port": 64541,
+            "users": [
+              {
+                "user": "qivV9tfm",
+                "pass": "zmwK312G"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20031和20033-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-FR_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20032和20033-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20041和20043-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-GB_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20042和20043-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20051和20053-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-DE_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20052和20053-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20061和20063-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-NL_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20062和20063-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20071和20073-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-CH_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20072和20073-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20081和20083-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-IT_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20082和20083-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20091和20093-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "as.smartproxycn.com",
+            "port": 1000,
+            "users": [
+              {
+                "user": "cscs001_area-NZ_session-cscs001_life-120",
+                "pass": "cscs001"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "20092和20093-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "自己设置",
+            "users": []
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30011和30013-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30012和30013-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30021和30023-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30022和30023-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30031和30033-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30032和30033-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30041和30043-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30042和30043-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30051和30053-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30052和30053-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30061和30063-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30062和30063-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30071和30073-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30072和30073-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30081和30083-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30082和30083-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30091和30093-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "30092和30093-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40011和40013-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40012和40013-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40021和40023-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40022和40023-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40031和40033-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40032和40033-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40041和40043-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40042和40043-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40051和40053-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40052和40053-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40061和40063-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40062和40063-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40071和40073-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40072和40073-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40081和40083-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40082和40083-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40091和40093-出站-动态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "动态地址",
+            "port": 7000,
+            "users": [
+              {
+                "user": "df98ert4",
+                "pass": "q1s456gf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "40092和40093-出站-静态-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "静态地址",
+            "port": 8000,
+            "users": [
+              {
+                "user": "qivv9tfm",
+                "pass": "zmwsf450"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "transport": null,
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserDownlink": true,
+        "statsUserUplink": true
+      }
+    },
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true,
+      "statsOutboundDownlink": true,
+      "statsOutboundUplink": true
+    }
+  },
+  "api": {
+    "tag": "api",
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ]
+  },
+  "stats": {},
+  "reverse": null,
+  "fakedns": [
+    {
+      "ipPool": "198.18.0.0/16",
+      "poolSize": 65535
+    }
+  ],
+  "observatory": null,
+  "burstObservatory": null
+}
