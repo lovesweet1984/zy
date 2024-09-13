@@ -32,10 +32,8 @@
       {
         "type": "field",
         "domain": [
-          "regexp:tiktokcdn\\..*",
-          "regexp:tiktokcdn-us\\..*",
-          "regexp:tiktokcdn-sa\\..*",
-          "regexp:tiktokcdn-ksa\\..*",
+          "regexp:tiktokcdn\\\\..*",
+          "regexp:tiktokcdn-us\\\\..*",
           "regexp:cdn\\\\..*\\\\.tiktokv\\\\.com",
           "regexp:cdn\\\\..*\\\\.tiktok\\\\.com"
         ],
@@ -80,7 +78,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50111-智能-5011组-"
@@ -111,7 +121,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50112-动态-5011组-"
@@ -142,7 +164,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50121-智能-5012组-"
@@ -173,7 +207,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50122-动态-5012组-"
@@ -204,7 +250,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50131-智能-5013组-"
@@ -235,7 +293,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50132-动态-5013组-"
@@ -266,7 +336,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50141-智能-5014组-"
@@ -297,7 +379,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50142-动态-5014组-"
@@ -328,7 +422,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50151-智能-5015组-"
@@ -359,7 +465,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50152-动态-5015组-"
@@ -390,7 +508,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50161-智能-5016组-"
@@ -421,7 +551,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50162-动态-5016组-"
@@ -452,7 +594,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50211-智能-5021组-"
@@ -483,7 +637,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50212-动态-5021组-"
@@ -514,7 +680,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50221-智能-5022组-"
@@ -545,7 +723,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50222-动态-5022组-"
@@ -576,7 +766,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50231-智能-5023组-"
@@ -607,7 +809,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50232-动态-5023组-"
@@ -638,7 +852,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50241-智能-5024组-"
@@ -669,7 +895,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50242-动态-5024组-"
@@ -700,7 +938,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50251-智能-5025组-"
@@ -731,7 +981,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50252-动态-5025组-"
@@ -762,7 +1024,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50261-智能-5026组-"
@@ -793,7 +1067,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50262-动态-5026组-"
@@ -824,7 +1110,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50311-智能-5031组-"
@@ -855,7 +1153,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50312-动态-5031组-"
@@ -886,7 +1196,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50321-智能-5032组-"
@@ -917,7 +1239,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50322-动态-5032组-"
@@ -948,7 +1282,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50331-智能-5033组-"
@@ -979,7 +1325,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50332-动态-5033组-"
@@ -1010,7 +1368,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50341-智能-5034组-"
@@ -1041,7 +1411,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50342-动态-5034组-"
@@ -1072,7 +1454,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50351-智能-5035组-"
@@ -1103,7 +1497,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50352-动态-5035组-"
@@ -1134,7 +1540,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50361-智能-5036组-"
@@ -1165,7 +1583,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50362-动态-5036组-"
@@ -1196,7 +1626,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50411-智能-5041组-"
@@ -1227,7 +1669,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50412-动态-5041组-"
@@ -1258,7 +1712,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50421-智能-5042组-"
@@ -1289,7 +1755,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50422-动态-5042组-"
@@ -1320,7 +1798,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50431-智能-5043组-"
@@ -1351,7 +1841,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50432-动态-5043组-"
@@ -1382,7 +1884,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50441-智能-5044组-"
@@ -1413,7 +1927,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50442-动态-5044组-"
@@ -1444,7 +1970,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50451-智能-5045组-"
@@ -1475,7 +2013,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50452-动态-5045组-"
@@ -1506,7 +2056,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50461-智能-5046组-"
@@ -1537,7 +2099,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50462-动态-5046组-"
@@ -1568,7 +2142,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50511-智能-5051组-"
@@ -1599,7 +2185,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50512-动态-5051组-"
@@ -1630,7 +2228,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50521-智能-5052组-"
@@ -1661,7 +2271,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50522-动态-5052组-"
@@ -1692,7 +2314,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50531-智能-5053组-"
@@ -1723,7 +2357,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50532-动态-5053组-"
@@ -1754,7 +2400,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50541-智能-5054组-"
@@ -1785,7 +2443,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50542-动态-5054组-"
@@ -1816,7 +2486,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50551-智能-5055组-"
@@ -1847,7 +2529,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50552-动态-5055组-"
@@ -1878,7 +2572,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50561-智能-5056组-"
@@ -1909,7 +2615,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50562-动态-5056组-"
@@ -1940,7 +2658,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50611-智能-5061组-"
@@ -1971,7 +2701,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50612-动态-5061组-"
@@ -2002,7 +2744,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50621-智能-5062组-"
@@ -2033,7 +2787,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50622-动态-5062组-"
@@ -2064,7 +2830,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50631-智能-5063组-"
@@ -2095,7 +2873,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50632-动态-5063组-"
@@ -2126,7 +2916,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50641-智能-5064组-"
@@ -2157,7 +2959,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50642-动态-5064组-"
@@ -2188,7 +3002,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50651-智能-5065组-"
@@ -2219,7 +3045,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50652-动态-5065组-"
@@ -2250,7 +3088,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50661-智能-5066组-"
@@ -2281,7 +3131,19 @@
           "ip.fm",
           "ipinfo.io",
           "smartproxy.cn",
-          "flush.smartproxy.cn"
+          "flush.smartproxy.cn",
+          "regexp:tiktok\\\\..*",
+          "regexp:tiktokv\\\\..*",
+          "regexp:tiktokapi\\\\..*",
+          "regexp:tiktokvdata\\\\..*",
+          "regexp:byteoversea\\\\..*",
+          "regexp:bytedance\\\\..*",
+          "regexp:musical\\\\.ly",
+          "regexp:snssdk\\\\..*",
+          "regexp:(smart|storm)\\\\.cyqv2ray\\\\.top",
+          "regexp:aipstatic\\\\..*",
+          "regexp:ip\\\\.sb",
+          "regexp:flush\\\\.smartproxy\\\\.cn"
         ],
         "inboundTag": [
           "50662-动态-5066组-"
