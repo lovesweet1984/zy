@@ -17,10 +17,10 @@
       },
       {
         "type": "field",
-        "outboundTag": "blocked",
         "ip": [
           "geoip:private"
-        ]
+        ],
+        "outboundTag": "blocked"
       },
       {
         "type": "field",
@@ -35,9 +35,33 @@
           "regexp:tiktokcdn\\..*",
           "regexp:tiktokcdn-us\\..*",
           "regexp:tiktokcdn-sa\\..*",
-          "regexp:tiktokcdn-ksa\\..*"
+          "regexp:tiktokcdn-ksa\\..*",
+          "regexp:cdn\\\\..*\\\\.tiktokv\\\\.com",
+          "regexp:cdn\\\\..*\\\\.tiktok\\\\.com"
         ],
         "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "223.5.5.5",
+          "114.114.114.114"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "direct"
       },
       {
         "type": "field",
@@ -2275,8 +2299,39 @@
   },
   "dns": {
     "servers": [
-      "1.1.1.1",
-      "8.8.8.8"
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "geosite:geolocation-!cn"
+        ],
+        "queryStrategy": "UseIP",
+        "skipFallback": true
+      },
+      {
+        "address": "1.1.1.1",
+        "domains": [
+          "geosite:geolocation-!cn"
+        ],
+        "queryStrategy": "UseIP",
+        "skipFallback": true
+      },
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "geosite:cn"
+        ],
+        "queryStrategy": "UseIP",
+        "skipFallback": true
+      },
+      {
+        "address": "114.114.114.114",
+        "domains": [
+          "geosite:cn"
+        ],
+        "queryStrategy": "UseIP",
+        "skipFallback": true
+      },
+      "localhost"
     ],
     "queryStrategy": "UseIP",
     "tag": "dns_inbound"

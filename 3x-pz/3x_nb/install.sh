@@ -248,6 +248,8 @@ echo -e "8900端口：TR协议，密码zy, 传输方式：grpc，SNI:yahoo.com"
 
 
 
+
+
 echo -e "协议:wireguard,中转进站端口如下:"
 echo -e "1个WG入站对应1个动态出站，1个WG入站对应1个静态出站"
 
