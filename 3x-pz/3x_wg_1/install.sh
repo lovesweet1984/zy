@@ -223,11 +223,11 @@ echo -e "完成关闭防火墙"
 echo -e "开始设置3x-xui的3x_wg_1模式"
 x-ui stop
 mkdir /root/bing
-curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_nb/bing/cert.crt
-curl -o /root/bing/private.key https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_nb/bing/private.key
-curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_nb/config.json
-curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_nb/x-ui.db
-curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_nb/xray-linux-amd64
+curl -o /root/bing/cert.crt https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_wg_1/bing/cert.crt
+curl -o /root/bing/private.key https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_wg_1/bing/private.key
+curl -o /usr/local/x-ui/bin/config.json https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_wg_1/config.json
+curl -o /etc/x-ui/x-ui.db https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_wg_1/x-ui.db
+curl -o /usr/local/x-ui/bin/xray-linux-amd64 https://raw.githubusercontent.com/lovesweet1984/zy/main/3x-pz/3x_wg_1/xray-linux-amd64
 x-ui start
 echo -e "完成设置3x-xui的3x_wg_1模式"
 
