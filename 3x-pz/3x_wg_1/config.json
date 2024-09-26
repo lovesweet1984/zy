@@ -31,6 +31,13 @@
       },
       {
         "type": "field",
+        "inboundTag": [
+          "9000-DNS进站WG-"
+        ],
+        "outboundTag": "DNS出站线路-01-"
+      },
+      {
+        "type": "field",
         "ip": [
           "geoip:google"
         ],
@@ -39,38 +46,19 @@
       {
         "type": "field",
         "domain": [
-          "geosite:google",
-          "regexp:google\\\\..*",
-          "regexp:measurement\\\\..*",
-          "regexp:gstatic\\\\..*",
-          "regexp:googleapis\\\\..*",
-          "regexp:(.*\\\\.)?gvt2\\\\.com",
-          "regexp:(.*\\\\.)?google\\\\.com",
-          "regexp:(.*\\\\.)?googleapis\\\\.com",
-          "regexp:(.*\\\\.)?gstatic\\\\.com",
-          "regexp:(.*\\\\.)?googleusercontent\\\\.com",
-          "regexp:(.*\\\\.)?youtube\\\\.com",
-          "regexp:(.*\\\\.)?ytimg\\\\.com",
-          "regexp:(.*\\\\.)?play\\\\.googleapis\\\\.com",
-          "regexp:(.*\\\\.)?updates\\\\.googleapis\\\\.com",
-          "regexp:(.*\\\\.)?dl\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?android\\\\.clients\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?accounts\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?clients3\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?clients4\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?mtalk\\\\.google\\\\.com",
-          "regexp:(.*\\\\.)?lh3\\\\.googleusercontent\\\\.com",
-          "regexp:(.*\\\\.)?gvt1\\\\.com",
-          "regexp:(.*\\\\.)?gvt3\\\\.com",
-          "regexp:(.*\\\\.)?gvt4\\\\.com"
+          "regexp:(.*)\\.*google(.*)\\.*(.*)",
+          "regexp:(.*)\\.*gstatic(.*)\\.*(.*)",
+          "regexp:(.*)\\.*measurement(.*)\\.*(.*)",
+          "regexp:(.*)\\.*gvt(.*)\\.*(.*)"
         ],
         "outboundTag": "blocked"
       },
       {
         "type": "field",
         "domain": [
-          "regexp:tiktokcdn\\\\..*",
-          "regexp:tiktokcdn-us\\\\..*"
+          "regexp:tiktokcdn\\..*",
+          "regexp:tiktokcdn-us\\..*",
+          "regexp:ttlivecdn\\..*"
         ],
         "outboundTag": "blocked"
       },
@@ -92,8 +80,8 @@
       {
         "type": "field",
         "domain": [
-          "regexp:moyunteng\\\\..*",
-          "regexp:(.*\\\\.)?bingtop\\\\.com"
+          "regexp:(.*)\\.*moyunteng(.*)\\.*(.*)",
+          "regexp:(.*)\\.*bingtop(.*)\\.*(.*)"
         ],
         "outboundTag": "direct"
       },
@@ -112,7 +100,7 @@
         "inboundTag": [
           "10011-坑位1-智能-"
         ],
-        "outboundTag": "坑位1-动态S5-"
+        "outboundTag": "坑位1-SS-"
       },
       {
         "type": "field",
@@ -143,7 +131,7 @@
         "inboundTag": [
           "10021-坑位2-智能-"
         ],
-        "outboundTag": "坑位2-动态S5-"
+        "outboundTag": "坑位2-SS-"
       },
       {
         "type": "field",
@@ -174,7 +162,7 @@
         "inboundTag": [
           "10031-坑位3-智能-"
         ],
-        "outboundTag": "坑位3-动态S5-"
+        "outboundTag": "坑位3-SS-"
       },
       {
         "type": "field",
@@ -205,7 +193,7 @@
         "inboundTag": [
           "10041-坑位4-智能-"
         ],
-        "outboundTag": "坑位4-动态S5-"
+        "outboundTag": "坑位4-SS-"
       },
       {
         "type": "field",
@@ -236,7 +224,7 @@
         "inboundTag": [
           "10051-坑位5-智能-"
         ],
-        "outboundTag": "坑位5-动态S5-"
+        "outboundTag": "坑位5-SS-"
       },
       {
         "type": "field",
@@ -267,7 +255,7 @@
         "inboundTag": [
           "10061-坑位6-智能-"
         ],
-        "outboundTag": "坑位6-动态S5-"
+        "outboundTag": "坑位6-SS-"
       },
       {
         "type": "field",
@@ -288,9 +276,10 @@
   "dns": {
     "servers": [
       {
-        "address": "223.5.5..5",
+        "address": "223.5.5.5",
         "domains": [
-          "geosite:cn"
+          "geosite:cn",
+          "regexp:.*\\.cn$"
         ],
         "queryStrategy": "UseIP",
         "skipFallback": true
@@ -447,7 +436,11 @@
         "metadataOnly": false,
         "routeOnly": false
       },
-      "allocate": null
+      "allocate": {
+        "strategy": "always",
+        "refresh": 5,
+        "concurrency": 3
+      }
     },
     {
       "listen": null,
@@ -471,6 +464,38 @@
           {
             "user": "sock3",
             "pass": "sock3"
+          },
+          {
+            "user": "sock4",
+            "pass": "sock4"
+          },
+          {
+            "user": "sock5",
+            "pass": "sock5"
+          },
+          {
+            "user": "sock6",
+            "pass": "sock6"
+          },
+          {
+            "user": "sock7",
+            "pass": "sock7"
+          },
+          {
+            "user": "sock8",
+            "pass": "sock8"
+          },
+          {
+            "user": "sock9",
+            "pass": "sock9"
+          },
+          {
+            "user": "sockzy",
+            "pass": "sockzy"
+          },
+          {
+            "user": "sockdns",
+            "pass": "sockdns"
           }
         ],
         "udp": true,
@@ -520,6 +545,46 @@
             "email": "ss3",
             "method": "aes-256-gcm",
             "password": "ss3"
+          },
+          {
+            "email": "ss4",
+            "method": "aes-256-gcm",
+            "password": "ss4"
+          },
+          {
+            "email": "ss5",
+            "method": "aes-256-gcm",
+            "password": "ss5"
+          },
+          {
+            "email": "ss6",
+            "method": "aes-256-gcm",
+            "password": "ss6"
+          },
+          {
+            "email": "ss7",
+            "method": "aes-256-gcm",
+            "password": "ss7"
+          },
+          {
+            "email": "ss8",
+            "method": "aes-256-gcm",
+            "password": "ss8"
+          },
+          {
+            "email": "ss9",
+            "method": "aes-256-gcm",
+            "password": "ss9"
+          },
+          {
+            "email": "sszy",
+            "method": "aes-256-gcm",
+            "password": "sszy"
+          },
+          {
+            "email": "ssdns",
+            "method": "aes-256-gcm",
+            "password": "ssdns"
           }
         ],
         "method": "aes-256-gcm",
@@ -529,24 +594,6 @@
       "streamSettings": {
         "network": "tcp",
         "security": "none",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tcpSettings": {
           "acceptProxyProtocol": false,
           "header": {
@@ -597,6 +644,46 @@
             "email": "vl3",
             "flow": "xtls-rprx-vision",
             "id": "vl3"
+          },
+          {
+            "email": "vl4",
+            "flow": "xtls-rprx-vision",
+            "id": "vl4"
+          },
+          {
+            "email": "vl5",
+            "flow": "xtls-rprx-vision",
+            "id": "vl5"
+          },
+          {
+            "email": "vl6",
+            "flow": "xtls-rprx-vision",
+            "id": "vl6"
+          },
+          {
+            "email": "vl7",
+            "flow": "xtls-rprx-vision",
+            "id": "vl7"
+          },
+          {
+            "email": "vl8",
+            "flow": "xtls-rprx-vision",
+            "id": "vl8"
+          },
+          {
+            "email": "vl9",
+            "flow": "xtls-rprx-vision",
+            "id": "vl9"
+          },
+          {
+            "email": "vlzy",
+            "flow": "xtls-rprx-vision",
+            "id": "vlzy"
+          },
+          {
+            "email": "vldns",
+            "flow": "xtls-rprx-vision",
+            "id": "vldns"
           }
         ],
         "decryption": "none",
@@ -692,6 +779,38 @@
           {
             "email": "vm3",
             "id": "vm3"
+          },
+          {
+            "email": "vm4",
+            "id": "vm4"
+          },
+          {
+            "email": "vm5",
+            "id": "vm5"
+          },
+          {
+            "email": "vm6",
+            "id": "vm6"
+          },
+          {
+            "email": "vm7",
+            "id": "vm7"
+          },
+          {
+            "email": "vm8",
+            "id": "vm8"
+          },
+          {
+            "email": "vm9",
+            "id": "vm9"
+          },
+          {
+            "email": "vmzy",
+            "id": "vmzy"
+          },
+          {
+            "email": "vmdns",
+            "id": "vmdns"
           }
         ]
       },
@@ -786,6 +905,46 @@
             "email": "tr3",
             "flow": "",
             "password": "tr3"
+          },
+          {
+            "email": "tr4",
+            "flow": "",
+            "password": "tr4"
+          },
+          {
+            "email": "tr5",
+            "flow": "",
+            "password": "tr5"
+          },
+          {
+            "email": "tr6",
+            "flow": "",
+            "password": "tr6"
+          },
+          {
+            "email": "tr7",
+            "flow": "",
+            "password": "tr7"
+          },
+          {
+            "email": "tr8",
+            "flow": "",
+            "password": "tr8"
+          },
+          {
+            "email": "tr9",
+            "flow": "",
+            "password": "tr9"
+          },
+          {
+            "email": "trzy",
+            "flow": "",
+            "password": "trzy"
+          },
+          {
+            "email": "trdns",
+            "flow": "",
+            "password": "trdns"
           }
         ],
         "fallbacks": []
@@ -854,6 +1013,40 @@
         "refresh": 5,
         "concurrency": 3
       }
+    },
+    {
+      "listen": null,
+      "port": 9000,
+      "protocol": "wireguard",
+      "settings": {
+        "mtu": 1420,
+        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
+        "peers": [
+          {
+            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
+            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
+            "allowedIPs": [
+              "10.7.0.2/32"
+            ],
+            "keepAlive": 0
+          }
+        ],
+        "kernelMode": false
+      },
+      "streamSettings": null,
+      "tag": "9000-DNS进站WG-",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      },
+      "allocate": null
     },
     {
       "listen": null,
@@ -1482,16 +1675,16 @@
       "tag": "blocked"
     },
     {
-      "tag": "中转-01-",
+      "tag": "DNS出站线路-01-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss1",
+            "password": "ssdns",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -1502,27 +1695,20 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
     {
-      "tag": "中转-02-",
+      "tag": "DNS出站线路-02-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss2",
+            "password": "ssdns",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -1533,27 +1719,20 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
     {
-      "tag": "中转-03-",
+      "tag": "DNS出站线路-03-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss3",
+            "password": "ssdns",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -1564,13 +1743,213 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+        }
+      }
+    },
+    {
+      "tag": "DNS出站线路-04-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "DNS出站线路-05-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "DNS出站线路-06-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-01-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-02-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-03-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-04-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-05-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转线路-06-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       }
     },
@@ -1580,11 +1959,11 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
-                "user": "用户名",
+                "user": "A36Oa9Fb8I-zone-abc-region-US-session-rkeNJr4h-sessTime-120",
                 "pass": "07438554"
               }
             ]
@@ -1593,11 +1972,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -1611,21 +1990,12 @@
             "port": 8500,
             "users": [
               {
-                "user": "sock",
-                "pass": "sock"
+                "user": "A36Oa9Fb8I-zone-abc-region-US-session-Pn8NpwwK-sessTime-120",
+                "pass": "07438554"
               }
             ]
           }
         ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
       }
     },
     {
@@ -1636,9 +2006,9 @@
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss",
+            "password": "ss1",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -1649,13 +2019,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1691,13 +2054,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1758,13 +2114,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1774,11 +2123,11 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
-                "user": "用户名",
+                "user": "A36Oa9Fb8I-zone-abc-region-US-session-KMQxDrPA-sessTime-120",
                 "pass": "07438554"
               }
             ]
@@ -1787,11 +2136,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -1811,15 +2160,6 @@
             ]
           }
         ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
       }
     },
     {
@@ -1830,9 +2170,9 @@
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss",
+            "password": "ss2",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -1843,13 +2183,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1885,13 +2218,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1952,13 +2278,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -1968,11 +2287,11 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
-                "user": "用户名",
+                "user": "A36Oa9Fb8I-zone-abc-region-US-session-jSZcraCc-sessTime-120",
                 "pass": "07438554"
               }
             ]
@@ -1981,11 +2300,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -2024,9 +2343,9 @@
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss",
+            "password": "ss3",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -2037,13 +2356,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2079,13 +2391,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2146,13 +2451,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2162,11 +2460,11 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
-                "user": "用户名",
+                "user": "A36Oa9Fb8I-zone-abc-region-US-session-PMRmGGK4-sessTime-120",
                 "pass": "07438554"
               }
             ]
@@ -2175,11 +2473,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -2199,15 +2497,6 @@
             ]
           }
         ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
       }
     },
     {
@@ -2218,9 +2507,9 @@
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss",
+            "password": "ss4",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -2231,13 +2520,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2273,13 +2555,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2340,13 +2615,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2356,7 +2624,7 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
@@ -2369,11 +2637,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -2393,15 +2661,6 @@
             ]
           }
         ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
       }
     },
     {
@@ -2414,7 +2673,7 @@
             "port": 8600,
             "password": "ss",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -2425,13 +2684,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2467,13 +2719,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2534,13 +2779,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2550,7 +2788,7 @@
       "settings": {
         "servers": [
           {
-            "address": "na.9c7f347a67038040.abcproxy.vip",
+            "address": "代理",
             "port": 4950,
             "users": [
               {
@@ -2563,11 +2801,11 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转-01-",
-          "tcpFastOpen": true,
+          "dialerProxy": "中转线路-01-",
+          "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
@@ -2587,15 +2825,6 @@
             ]
           }
         ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
       }
     },
     {
@@ -2608,7 +2837,7 @@
             "port": 8600,
             "password": "ss",
             "method": "aes-256-gcm",
-            "uot": true
+            "uot": false
           }
         ]
       },
@@ -2619,13 +2848,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2661,13 +2883,6 @@
           "header": {
             "type": "none"
           }
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     },
@@ -2728,13 +2943,6 @@
           "serviceName": "",
           "authority": "",
           "multiMode": false
-        },
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
         }
       }
     }
