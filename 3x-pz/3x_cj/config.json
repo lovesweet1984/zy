@@ -2,8 +2,9 @@
   "log": {
     "access": "none",
     "dnsLog": false,
-    "error": "./error.log",
-    "loglevel": "warning"
+    "error": "",
+    "loglevel": "warning",
+    "maskAddress": ""
   },
   "routing": {
     "domainStrategy": "AsIs",
@@ -31,13 +32,7 @@
       }
     ]
   },
-  "dns": {
-    "servers": [
-      "8.8.8.8"
-    ],
-    "queryStrategy": "UseIP",
-    "tag": "dns_inbound"
-  },
+  "dns": null,
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -211,46 +206,6 @@
             "pass": "skzz"
           },
           {
-            "user": "sk101",
-            "pass": "sk101"
-          },
-          {
-            "user": "sk102",
-            "pass": "sk102"
-          },
-          {
-            "user": "sk103",
-            "pass": "sk103"
-          },
-          {
-            "user": "sk104",
-            "pass": "sk104"
-          },
-          {
-            "user": "sk105",
-            "pass": "sk105"
-          },
-          {
-            "user": "sk106",
-            "pass": "sk106"
-          },
-          {
-            "user": "sk107",
-            "pass": "sk107"
-          },
-          {
-            "user": "sk108",
-            "pass": "sk108"
-          },
-          {
-            "user": "sk109",
-            "pass": "sk109"
-          },
-          {
-            "user": "sk110",
-            "pass": "sk110"
-          },
-          {
             "user": "sk111",
             "pass": "sk111"
           },
@@ -259,36 +214,92 @@
             "pass": "sk112"
           },
           {
-            "user": "sk113",
-            "pass": "sk113"
+            "user": "sk121",
+            "pass": "sk121"
           },
           {
-            "user": "sk114",
-            "pass": "sk114"
+            "user": "sk122",
+            "pass": "sk122"
           },
           {
-            "user": "sk115",
-            "pass": "sk115"
+            "user": "sk131",
+            "pass": "sk131"
           },
           {
-            "user": "sk116",
-            "pass": "sk116"
+            "user": "sk132",
+            "pass": "sk132"
           },
           {
-            "user": "sk117",
-            "pass": "sk117"
+            "user": "sk141",
+            "pass": "sk141"
           },
           {
-            "user": "sk118",
-            "pass": "sk118"
+            "user": "sk142",
+            "pass": "sk142"
           },
           {
-            "user": "sk119",
-            "pass": "sk119"
+            "user": "sk151",
+            "pass": "sk151"
           },
           {
-            "user": "sk120",
-            "pass": "sk120"
+            "user": "sk152",
+            "pass": "sk152"
+          },
+          {
+            "user": "sk161",
+            "pass": "sk161"
+          },
+          {
+            "user": "sk162",
+            "pass": "sk162"
+          },
+          {
+            "user": "sk211",
+            "pass": "sk211"
+          },
+          {
+            "user": "sk212",
+            "pass": "sk212"
+          },
+          {
+            "user": "sk221",
+            "pass": "sk221"
+          },
+          {
+            "user": "sk222",
+            "pass": "sk222"
+          },
+          {
+            "user": "sk231",
+            "pass": "sk231"
+          },
+          {
+            "user": "sk232",
+            "pass": "sk232"
+          },
+          {
+            "user": "sk241",
+            "pass": "sk241"
+          },
+          {
+            "user": "sk242",
+            "pass": "sk242"
+          },
+          {
+            "user": "sk251",
+            "pass": "sk251"
+          },
+          {
+            "user": "sk252",
+            "pass": "sk252"
+          },
+          {
+            "user": "sk261",
+            "pass": "sk261"
+          },
+          {
+            "user": "sk262",
+            "pass": "sk262"
           }
         ],
         "udp": true,
@@ -340,56 +351,6 @@
             "password": "sszz"
           },
           {
-            "email": "ss101",
-            "method": "aes-256-gcm",
-            "password": "ss101"
-          },
-          {
-            "email": "ss102",
-            "method": "aes-256-gcm",
-            "password": "ss102"
-          },
-          {
-            "email": "ss103",
-            "method": "aes-256-gcm",
-            "password": "ss103"
-          },
-          {
-            "email": "ss104",
-            "method": "aes-256-gcm",
-            "password": "ss104"
-          },
-          {
-            "email": "ss105",
-            "method": "aes-256-gcm",
-            "password": "ss105"
-          },
-          {
-            "email": "ss106",
-            "method": "aes-256-gcm",
-            "password": "ss106"
-          },
-          {
-            "email": "ss107",
-            "method": "aes-256-gcm",
-            "password": "ss107"
-          },
-          {
-            "email": "ss108",
-            "method": "aes-256-gcm",
-            "password": "ss108"
-          },
-          {
-            "email": "ss109",
-            "method": "aes-256-gcm",
-            "password": "ss109"
-          },
-          {
-            "email": "ss110",
-            "method": "aes-256-gcm",
-            "password": "ss110"
-          },
-          {
             "email": "ss111",
             "method": "aes-256-gcm",
             "password": "ss111"
@@ -400,44 +361,114 @@
             "password": "ss112"
           },
           {
-            "email": "ss113",
+            "email": "ss121",
             "method": "aes-256-gcm",
-            "password": "ss113"
+            "password": "ss121"
           },
           {
-            "email": "ss114",
+            "email": "ss122",
             "method": "aes-256-gcm",
-            "password": "ss114"
+            "password": "ss122"
           },
           {
-            "email": "ss115",
+            "email": "ss131",
             "method": "aes-256-gcm",
-            "password": "ss115"
+            "password": "ss131"
           },
           {
-            "email": "ss116",
+            "email": "ss132",
             "method": "aes-256-gcm",
-            "password": "ss116"
+            "password": "ss132"
           },
           {
-            "email": "ss117",
+            "email": "ss141",
             "method": "aes-256-gcm",
-            "password": "ss117"
+            "password": "ss141"
           },
           {
-            "email": "ss118",
+            "email": "ss142",
             "method": "aes-256-gcm",
-            "password": "ss118"
+            "password": "ss142"
           },
           {
-            "email": "ss119",
+            "email": "ss151",
             "method": "aes-256-gcm",
-            "password": "ss119"
+            "password": "ss151"
           },
           {
-            "email": "ss120",
+            "email": "ss152",
             "method": "aes-256-gcm",
-            "password": "ss120"
+            "password": "ss152"
+          },
+          {
+            "email": "ss161",
+            "method": "aes-256-gcm",
+            "password": "ss161"
+          },
+          {
+            "email": "ss162",
+            "method": "aes-256-gcm",
+            "password": "ss162"
+          },
+          {
+            "email": "ss211",
+            "method": "aes-256-gcm",
+            "password": "ss211"
+          },
+          {
+            "email": "ss212",
+            "method": "aes-256-gcm",
+            "password": "ss212"
+          },
+          {
+            "email": "ss221",
+            "method": "aes-256-gcm",
+            "password": "ss221"
+          },
+          {
+            "email": "ss222",
+            "method": "aes-256-gcm",
+            "password": "ss222"
+          },
+          {
+            "email": "ss231",
+            "method": "aes-256-gcm",
+            "password": "ss231"
+          },
+          {
+            "email": "ss232",
+            "method": "aes-256-gcm",
+            "password": "ss232"
+          },
+          {
+            "email": "ss241",
+            "method": "aes-256-gcm",
+            "password": "ss241"
+          },
+          {
+            "email": "ss242",
+            "method": "aes-256-gcm",
+            "password": "ss242"
+          },
+          {
+            "email": "ss251",
+            "method": "aes-256-gcm",
+            "password": "ss251"
+          },
+          {
+            "email": "ss252",
+            "method": "aes-256-gcm",
+            "password": "ss252"
+          },
+          {
+            "email": "ss261",
+            "method": "aes-256-gcm",
+            "password": "ss261"
+          },
+          {
+            "email": "ss262",
+            "method": "aes-256-gcm",
+            "password": "ss262"
           }
         ],
         "method": "aes-256-gcm",
@@ -447,24 +478,6 @@
       "streamSettings": {
         "network": "tcp",
         "security": "none",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tcpSettings": {
           "acceptProxyProtocol": false,
           "header": {
@@ -517,56 +530,6 @@
             "id": "vlzz"
           },
           {
-            "email": "vl101",
-            "flow": "xtls-rprx-vision",
-            "id": "vl101"
-          },
-          {
-            "email": "vl102",
-            "flow": "xtls-rprx-vision",
-            "id": "vl102"
-          },
-          {
-            "email": "vl103",
-            "flow": "xtls-rprx-vision",
-            "id": "vl103"
-          },
-          {
-            "email": "vl104",
-            "flow": "xtls-rprx-vision",
-            "id": "vl104"
-          },
-          {
-            "email": "vl105",
-            "flow": "xtls-rprx-vision",
-            "id": "vl105"
-          },
-          {
-            "email": "vl106",
-            "flow": "xtls-rprx-vision",
-            "id": "vl106"
-          },
-          {
-            "email": "vl107",
-            "flow": "xtls-rprx-vision",
-            "id": "vl107"
-          },
-          {
-            "email": "vl108",
-            "flow": "xtls-rprx-vision",
-            "id": "vl108"
-          },
-          {
-            "email": "vl109",
-            "flow": "xtls-rprx-vision",
-            "id": "vl109"
-          },
-          {
-            "email": "vl110",
-            "flow": "xtls-rprx-vision",
-            "id": "vl110"
-          },
-          {
             "email": "vl111",
             "flow": "xtls-rprx-vision",
             "id": "vl111"
@@ -577,44 +540,114 @@
             "id": "vl112"
           },
           {
-            "email": "vl113",
+            "email": "vl121",
             "flow": "xtls-rprx-vision",
-            "id": "vl113"
+            "id": "vl121"
           },
           {
-            "email": "vl114",
+            "email": "vl122",
             "flow": "xtls-rprx-vision",
-            "id": "vl114"
+            "id": "vl122"
           },
           {
-            "email": "vl115",
+            "email": "vl131",
             "flow": "xtls-rprx-vision",
-            "id": "vl115"
+            "id": "vl131"
           },
           {
-            "email": "vl116",
+            "email": "vl132",
             "flow": "xtls-rprx-vision",
-            "id": "vl116"
+            "id": "vl132"
           },
           {
-            "email": "vl117",
+            "email": "vl141",
             "flow": "xtls-rprx-vision",
-            "id": "vl117"
+            "id": "vl141"
           },
           {
-            "email": "vl118",
+            "email": "vl142",
             "flow": "xtls-rprx-vision",
-            "id": "vl118"
+            "id": "vl142"
           },
           {
-            "email": "vl119",
+            "email": "vl151",
             "flow": "xtls-rprx-vision",
-            "id": "vl119"
+            "id": "vl151"
           },
           {
-            "email": "vl120",
+            "email": "vl152",
             "flow": "xtls-rprx-vision",
-            "id": "vl120"
+            "id": "vl152"
+          },
+          {
+            "email": "vl161",
+            "flow": "xtls-rprx-vision",
+            "id": "vl161"
+          },
+          {
+            "email": "vl162",
+            "flow": "xtls-rprx-vision",
+            "id": "vl162"
+          },
+          {
+            "email": "vl211",
+            "flow": "xtls-rprx-vision",
+            "id": "vl211"
+          },
+          {
+            "email": "vl212",
+            "flow": "xtls-rprx-vision",
+            "id": "vl212"
+          },
+          {
+            "email": "vl221",
+            "flow": "xtls-rprx-vision",
+            "id": "vl221"
+          },
+          {
+            "email": "vl222",
+            "flow": "xtls-rprx-vision",
+            "id": "vl222"
+          },
+          {
+            "email": "vl231",
+            "flow": "xtls-rprx-vision",
+            "id": "vl231"
+          },
+          {
+            "email": "vl232",
+            "flow": "xtls-rprx-vision",
+            "id": "vl232"
+          },
+          {
+            "email": "vl241",
+            "flow": "xtls-rprx-vision",
+            "id": "vl241"
+          },
+          {
+            "email": "vl242",
+            "flow": "xtls-rprx-vision",
+            "id": "vl242"
+          },
+          {
+            "email": "vl251",
+            "flow": "xtls-rprx-vision",
+            "id": "vl251"
+          },
+          {
+            "email": "vl252",
+            "flow": "xtls-rprx-vision",
+            "id": "vl252"
+          },
+          {
+            "email": "vl261",
+            "flow": "xtls-rprx-vision",
+            "id": "vl261"
+          },
+          {
+            "email": "vl262",
+            "flow": "xtls-rprx-vision",
+            "id": "vl262"
           }
         ],
         "decryption": "none",
@@ -646,24 +679,6 @@
           "xver": 0
         },
         "security": "reality",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tcpSettings": {
           "acceptProxyProtocol": false,
           "header": {
@@ -712,46 +727,6 @@
             "id": "vmzz"
           },
           {
-            "email": "vm101",
-            "id": "vm101"
-          },
-          {
-            "email": "vm102",
-            "id": "vm102"
-          },
-          {
-            "email": "vm103",
-            "id": "vm103"
-          },
-          {
-            "email": "vm104",
-            "id": "vm104"
-          },
-          {
-            "email": "vm105",
-            "id": "vm105"
-          },
-          {
-            "email": "vm106",
-            "id": "vm106"
-          },
-          {
-            "email": "vm107",
-            "id": "vm107"
-          },
-          {
-            "email": "vm108",
-            "id": "vm108"
-          },
-          {
-            "email": "vm109",
-            "id": "vm109"
-          },
-          {
-            "email": "vm110",
-            "id": "vm110"
-          },
-          {
             "email": "vm111",
             "id": "vm111"
           },
@@ -760,60 +735,98 @@
             "id": "vm112"
           },
           {
-            "email": "vm113",
-            "id": "vm113"
+            "email": "vm121",
+            "id": "vm121"
           },
           {
-            "email": "vm114",
-            "id": "vm114"
+            "email": "vm122",
+            "id": "vm122"
           },
           {
-            "email": "vm115",
-            "id": "vm115"
+            "email": "vm131",
+            "id": "vm131"
           },
           {
-            "email": "vm116",
-            "id": "vm116"
+            "email": "vm132",
+            "id": "vm132"
           },
           {
-            "email": "vm117",
-            "id": "vm117"
+            "email": "vm141",
+            "id": "vm141"
           },
           {
-            "email": "vm118",
-            "id": "vm118"
+            "email": "vm142",
+            "id": "vm142"
           },
           {
-            "email": "vm119",
-            "id": "vm119"
+            "email": "vm151",
+            "id": "vm151"
           },
           {
-            "email": "vm120",
-            "id": "vm120"
+            "email": "vm152",
+            "id": "vm152"
+          },
+          {
+            "email": "vm161",
+            "id": "vm161"
+          },
+          {
+            "email": "vm162",
+            "id": "vm162"
+          },
+          {
+            "email": "vm211",
+            "id": "vm211"
+          },
+          {
+            "email": "vm212",
+            "id": "vm212"
+          },
+          {
+            "email": "vm221",
+            "id": "vm221"
+          },
+          {
+            "email": "vm222",
+            "id": "vm222"
+          },
+          {
+            "email": "vm231",
+            "id": "vm231"
+          },
+          {
+            "email": "vm232",
+            "id": "vm232"
+          },
+          {
+            "email": "vm241",
+            "id": "vm241"
+          },
+          {
+            "email": "vm242",
+            "id": "vm242"
+          },
+          {
+            "email": "vm251",
+            "id": "vm251"
+          },
+          {
+            "email": "vm252",
+            "id": "vm252"
+          },
+          {
+            "email": "vm261",
+            "id": "vm261"
+          },
+          {
+            "email": "vm262",
+            "id": "vm262"
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
         "security": "tls",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tlsSettings": {
           "alpn": [],
           "certificates": [
@@ -886,56 +899,6 @@
             "password": "trzz"
           },
           {
-            "email": "tr101",
-            "flow": "",
-            "password": "tr101"
-          },
-          {
-            "email": "tr102",
-            "flow": "",
-            "password": "tr102"
-          },
-          {
-            "email": "tr103",
-            "flow": "",
-            "password": "tr103"
-          },
-          {
-            "email": "tr104",
-            "flow": "",
-            "password": "tr104"
-          },
-          {
-            "email": "tr105",
-            "flow": "",
-            "password": "tr105"
-          },
-          {
-            "email": "tr106",
-            "flow": "",
-            "password": "tr106"
-          },
-          {
-            "email": "tr107",
-            "flow": "",
-            "password": "tr107"
-          },
-          {
-            "email": "tr108",
-            "flow": "",
-            "password": "tr108"
-          },
-          {
-            "email": "tr109",
-            "flow": "",
-            "password": "tr109"
-          },
-          {
-            "email": "tr110",
-            "flow": "",
-            "password": "tr110"
-          },
-          {
             "email": "tr111",
             "flow": "",
             "password": "tr111"
@@ -946,44 +909,114 @@
             "password": "tr112"
           },
           {
-            "email": "tr113",
+            "email": "tr121",
             "flow": "",
-            "password": "tr113"
+            "password": "tr121"
           },
           {
-            "email": "tr114",
+            "email": "tr122",
             "flow": "",
-            "password": "tr114"
+            "password": "tr122"
           },
           {
-            "email": "tr115",
+            "email": "tr131",
             "flow": "",
-            "password": "tr115"
+            "password": "tr131"
           },
           {
-            "email": "tr116",
+            "email": "tr132",
             "flow": "",
-            "password": "tr116"
+            "password": "tr132"
           },
           {
-            "email": "tr117",
+            "email": "tr141",
             "flow": "",
-            "password": "tr117"
+            "password": "tr141"
           },
           {
-            "email": "tr118",
+            "email": "tr142",
             "flow": "",
-            "password": "tr118"
+            "password": "tr142"
           },
           {
-            "email": "tr119",
+            "email": "tr151",
             "flow": "",
-            "password": "tr119"
+            "password": "tr151"
           },
           {
-            "email": "tr120",
+            "email": "tr152",
             "flow": "",
-            "password": "tr120"
+            "password": "tr152"
+          },
+          {
+            "email": "tr161",
+            "flow": "",
+            "password": "tr161"
+          },
+          {
+            "email": "tr162",
+            "flow": "",
+            "password": "tr162"
+          },
+          {
+            "email": "tr211",
+            "flow": "",
+            "password": "tr211"
+          },
+          {
+            "email": "tr212",
+            "flow": "",
+            "password": "tr212"
+          },
+          {
+            "email": "tr221",
+            "flow": "",
+            "password": "tr221"
+          },
+          {
+            "email": "tr222",
+            "flow": "",
+            "password": "tr222"
+          },
+          {
+            "email": "tr231",
+            "flow": "",
+            "password": "tr231"
+          },
+          {
+            "email": "tr232",
+            "flow": "",
+            "password": "tr232"
+          },
+          {
+            "email": "tr241",
+            "flow": "",
+            "password": "tr241"
+          },
+          {
+            "email": "tr242",
+            "flow": "",
+            "password": "tr242"
+          },
+          {
+            "email": "tr251",
+            "flow": "",
+            "password": "tr251"
+          },
+          {
+            "email": "tr252",
+            "flow": "",
+            "password": "tr252"
+          },
+          {
+            "email": "tr261",
+            "flow": "",
+            "password": "tr261"
+          },
+          {
+            "email": "tr262",
+            "flow": "",
+            "password": "tr262"
           }
         ],
         "fallbacks": []
@@ -996,24 +1029,6 @@
         },
         "network": "grpc",
         "security": "tls",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tlsSettings": {
           "alpn": [],
           "certificates": [
@@ -1093,12 +1108,7 @@
   },
   "stats": {},
   "reverse": null,
-  "fakedns": [
-    {
-      "ipPool": "198.18.0.0/16",
-      "poolSize": 65535
-    }
-  ],
+  "fakedns": null,
   "observatory": null,
   "burstObservatory": null
 }
