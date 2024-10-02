@@ -16,11 +16,11 @@
         "type": "field"
       },
       {
-        "type": "field",
         "ip": [
           "geoip:private"
         ],
-        "outboundTag": "blocked"
+        "outboundTag": "blocked",
+        "type": "field"
       },
       {
         "outboundTag": "blocked",
@@ -31,43 +31,58 @@
       },
       {
         "type": "field",
-        "inboundTag": [
-          "9000-DNS进站WG-"
-        ],
-        "outboundTag": "DNS出站线路-01-"
-      },
-      {
-        "type": "field",
-        "ip": [
-          "geoip:google"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "domain": [
-          "regexp:(.*)\\.*google(.*)\\.*(.*)",
-          "regexp:(.*)\\.*gstatic(.*)\\.*(.*)",
-          "regexp:(.*)\\.*measurement(.*)\\.*(.*)",
-          "regexp:(.*)\\.*gvt(.*)\\.*(.*)"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "domain": [
-          "regexp:tiktokcdn\\..*",
-          "regexp:tiktokcdn-us\\..*",
-          "regexp:ttlivecdn\\..*"
-        ],
-        "outboundTag": "blocked"
-      },
-      {
-        "type": "field",
-        "ip": [
-          "geoip:cn"
+        "user": [
+          "sk",
+          "skdns",
+          "skzy",
+          "ss",
+          "ssdns",
+          "sszy",
+          "vl",
+          "vldns",
+          "vlzy",
+          "vm",
+          "vmdns",
+          "vmzy",
+          "tr",
+          "trdns",
+          "trzy"
         ],
         "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "9000-DNS-WG入站-"
+        ],
+        "outboundTag": "DNS出站-1-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:google",
+          "regexp:.*google.*",
+          "regexp:.*gstatic.*",
+          "regexp:.*measurement.*",
+          "regexp:.*gvt.*"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:.*tiktokcdn.*",
+          "regexp:.*tiktokcdn-us.*",
+          "regexp:.*cdn.*"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:cn"
+        ]
       },
       {
         "type": "field",
@@ -80,215 +95,218 @@
       {
         "type": "field",
         "domain": [
-          "regexp:(.*)\\.*moyunteng(.*)\\.*(.*)",
-          "regexp:(.*)\\.*bingtop(.*)\\.*(.*)"
+          "regexp:moyunteng",
+          "regexp:bingtop"
         ],
         "outboundTag": "direct"
       },
       {
         "type": "field",
-        "domain": [
-          "ip.me"
-        ],
         "inboundTag": [
-          "10011-坑位1-智能-"
+          "10011-坑位1-线路1-"
         ],
-        "outboundTag": "坑位1-S5-"
+        "outboundTag": "坑位1-动态远端中转-1-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10011-坑位1-智能-"
+          "10012-坑位1-线路2-"
         ],
-        "outboundTag": "坑位1-SS-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10012-坑位1-动态-"
-        ],
-        "outboundTag": "坑位1-动态S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10013-坑位1-静态-"
-        ],
-        "outboundTag": "坑位1-SS-"
+        "outboundTag": "坑位1-动态远端中转-2-"
       },
       {
         "type": "field",
         "domain": [
-          "ip.me"
+          "regexp:走SK线路的域名"
         ],
         "inboundTag": [
-          "10021-坑位2-智能-"
+          "10013-坑位1-智能-"
         ],
-        "outboundTag": "坑位2-S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10021-坑位2-智能-"
-        ],
-        "outboundTag": "坑位2-SS-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10022-坑位2-动态-"
-        ],
-        "outboundTag": "坑位2-动态S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10023-坑位2-静态-"
-        ],
-        "outboundTag": "坑位2-SS-"
+        "outboundTag": "坑位1-sk-"
       },
       {
         "type": "field",
         "domain": [
-          "ip.me"
+          "regexp:走SS线路的域名"
         ],
         "inboundTag": [
-          "10031-坑位3-智能-"
+          "10013-坑位1-智能-"
         ],
-        "outboundTag": "坑位3-S5-"
+        "outboundTag": "坑位1-ss-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10031-坑位3-智能-"
+          "10021-坑位2-线路1-"
         ],
-        "outboundTag": "坑位3-SS-"
+        "outboundTag": "坑位2-动态远端中转-1-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10032-坑位3-动态-"
+          "10022-坑位2-线路2-"
         ],
-        "outboundTag": "坑位3-动态S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10033-坑位3-静态-"
-        ],
-        "outboundTag": "坑位3-SS-"
+        "outboundTag": "坑位2-动态远端中转-2-"
       },
       {
         "type": "field",
         "domain": [
-          "ip.me"
+          "regexp:走SK线路的域名"
         ],
         "inboundTag": [
-          "10041-坑位4-智能-"
+          "10023-坑位2-智能-"
         ],
-        "outboundTag": "坑位4-S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10041-坑位4-智能-"
-        ],
-        "outboundTag": "坑位4-SS-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10042-坑位4-动态-"
-        ],
-        "outboundTag": "坑位4-动态S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10043-坑位4-静态-"
-        ],
-        "outboundTag": "坑位4-SS-"
+        "outboundTag": "坑位2-sk-"
       },
       {
         "type": "field",
         "domain": [
-          "ip.me"
+          "regexp:走SS线路的域名"
         ],
         "inboundTag": [
-          "10051-坑位5-智能-"
+          "10023-坑位2-智能-"
         ],
-        "outboundTag": "坑位5-S5-"
+        "outboundTag": "坑位2-ss-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10051-坑位5-智能-"
+          "10031-坑位3-线路1-"
         ],
-        "outboundTag": "坑位5-SS-"
+        "outboundTag": "坑位3-动态远端中转-1-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10052-坑位5-动态-"
+          "10032-坑位3-线路2-"
         ],
-        "outboundTag": "坑位5-动态S5-"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "10053-坑位5-静态-"
-        ],
-        "outboundTag": "坑位5-SS-"
+        "outboundTag": "坑位3-动态远端中转-2-"
       },
       {
         "type": "field",
         "domain": [
-          "ip.me"
+          "regexp:走SK线路的域名"
         ],
         "inboundTag": [
-          "10061-坑位6-智能-"
+          "10033-坑位3-智能-"
         ],
-        "outboundTag": "坑位6-S5-"
+        "outboundTag": "坑位3-sk-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SS线路的域名"
+        ],
+        "inboundTag": [
+          "10033-坑位3-智能-"
+        ],
+        "outboundTag": "坑位3-ss-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10061-坑位6-智能-"
+          "10041-坑位4-线路1-"
         ],
-        "outboundTag": "坑位6-SS-"
+        "outboundTag": "坑位4-动态远端中转-1-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10062-坑位6-动态-"
+          "10042-坑位4-线路2-"
         ],
-        "outboundTag": "坑位6-动态S5-"
+        "outboundTag": "坑位4-动态远端中转-2-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SK线路的域名"
+        ],
+        "inboundTag": [
+          "10043-坑位4-智能-"
+        ],
+        "outboundTag": "坑位4-sk-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SS线路的域名"
+        ],
+        "inboundTag": [
+          "10043-坑位4-智能-"
+        ],
+        "outboundTag": "坑位4-ss-"
       },
       {
         "type": "field",
         "inboundTag": [
-          "10063-坑位6-静态-"
+          "10051-坑位5-线路1-"
         ],
-        "outboundTag": "坑位6-SS-"
+        "outboundTag": "坑位5-动态远端中转-1-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "10052-坑位5-线路2-"
+        ],
+        "outboundTag": "坑位5-动态远端中转-2-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SK线路的域名"
+        ],
+        "inboundTag": [
+          "10053-坑位5-智能-"
+        ],
+        "outboundTag": "坑位5-sk-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SS线路的域名"
+        ],
+        "inboundTag": [
+          "10053-坑位5-智能-"
+        ],
+        "outboundTag": "坑位5-ss-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "10061-坑位6-线路1-"
+        ],
+        "outboundTag": "坑位6-动态远端中转-1-"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "10062-坑位6-线路2-"
+        ],
+        "outboundTag": "坑位6-动态远端中转-2-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SK线路的域名"
+        ],
+        "inboundTag": [
+          "10063-坑位6-智能-"
+        ],
+        "outboundTag": "坑位6-sk-"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:走SS线路的域名"
+        ],
+        "inboundTag": [
+          "10063-坑位6-智能-"
+        ],
+        "outboundTag": "坑位6-ss-"
       }
     ]
   },
-  "dns": {
-    "servers": [
-      {
-        "address": "223.5.5.5",
-        "domains": [
-          "geosite:cn",
-          "regexp:.*\\.cn$"
-        ],
-        "queryStrategy": "UseIP",
-        "skipFallback": true
-      },
-      "8.8.8.8"
-    ],
-    "queryStrategy": "UseIP",
-    "tag": "dns_inbound"
-  },
+  "dns": null,
   "inbounds": [
     {
       "listen": "127.0.0.1",
@@ -436,11 +454,7 @@
         "metadataOnly": false,
         "routeOnly": false
       },
-      "allocate": {
-        "strategy": "always",
-        "refresh": 5,
-        "concurrency": 3
-      }
+      "allocate": null
     },
     {
       "listen": null,
@@ -450,52 +464,116 @@
         "auth": "password",
         "accounts": [
           {
-            "user": "sock",
-            "pass": "sock"
+            "user": "sk",
+            "pass": "sk"
           },
           {
-            "user": "sock1",
-            "pass": "sock1"
+            "user": "skdns",
+            "pass": "skdns"
           },
           {
-            "user": "sock2",
-            "pass": "sock2"
+            "user": "skzy",
+            "pass": "skzy"
           },
           {
-            "user": "sock3",
-            "pass": "sock3"
+            "user": "skzz",
+            "pass": "skzz"
           },
           {
-            "user": "sock4",
-            "pass": "sock4"
+            "user": "sk10011",
+            "pass": "sk10011"
           },
           {
-            "user": "sock5",
-            "pass": "sock5"
+            "user": "sk10012",
+            "pass": "sk10012"
           },
           {
-            "user": "sock6",
-            "pass": "sock6"
+            "user": "sk10021",
+            "pass": "sk10021"
           },
           {
-            "user": "sock7",
-            "pass": "sock7"
+            "user": "sk10022",
+            "pass": "sk10022"
           },
           {
-            "user": "sock8",
-            "pass": "sock8"
+            "user": "sk10031",
+            "pass": "sk10031"
           },
           {
-            "user": "sock9",
-            "pass": "sock9"
+            "user": "sk10032",
+            "pass": "sk10032"
           },
           {
-            "user": "sockzy",
-            "pass": "sockzy"
+            "user": "sk10041",
+            "pass": "sk10041"
           },
           {
-            "user": "sockdns",
-            "pass": "sockdns"
+            "user": "sk10042",
+            "pass": "sk10042"
+          },
+          {
+            "user": "sk10051",
+            "pass": "sk10051"
+          },
+          {
+            "user": "sk10052",
+            "pass": "sk10052"
+          },
+          {
+            "user": "sk10061",
+            "pass": "sk10061"
+          },
+          {
+            "user": "sk10062",
+            "pass": "sk10062"
+          },
+          {
+            "user": "sk20011",
+            "pass": "sk20011"
+          },
+          {
+            "user": "sk20012",
+            "pass": "sk20012"
+          },
+          {
+            "user": "sk20021",
+            "pass": "sk20021"
+          },
+          {
+            "user": "sk20022",
+            "pass": "sk20022"
+          },
+          {
+            "user": "sk20031",
+            "pass": "sk20031"
+          },
+          {
+            "user": "sk20032",
+            "pass": "sk20032"
+          },
+          {
+            "user": "sk20041",
+            "pass": "sk20041"
+          },
+          {
+            "user": "sk20042",
+            "pass": "sk20042"
+          },
+          {
+            "user": "sk20051",
+            "pass": "sk20051"
+          },
+          {
+            "user": "sk20052",
+            "pass": "sk20052"
+          },
+          {
+            "user": "sk20061",
+            "pass": "sk20061"
+          },
+          {
+            "user": "sk20062",
+            "pass": "sk20062"
           }
         ],
         "udp": true,
@@ -532,49 +610,9 @@
             "password": "ss"
           },
           {
-            "email": "ss1",
+            "email": "ssdns",
             "method": "aes-256-gcm",
-            "password": "ss1"
-          },
-          {
-            "email": "ss2",
-            "method": "aes-256-gcm",
-            "password": "ss2"
-          },
-          {
-            "email": "ss3",
-            "method": "aes-256-gcm",
-            "password": "ss3"
-          },
-          {
-            "email": "ss4",
-            "method": "aes-256-gcm",
-            "password": "ss4"
-          },
-          {
-            "email": "ss5",
-            "method": "aes-256-gcm",
-            "password": "ss5"
-          },
-          {
-            "email": "ss6",
-            "method": "aes-256-gcm",
-            "password": "ss6"
-          },
-          {
-            "email": "ss7",
-            "method": "aes-256-gcm",
-            "password": "ss7"
-          },
-          {
-            "email": "ss8",
-            "method": "aes-256-gcm",
-            "password": "ss8"
-          },
-          {
-            "email": "ss9",
-            "method": "aes-256-gcm",
-            "password": "ss9"
+            "password": "ssdns"
           },
           {
             "email": "sszy",
@@ -582,9 +620,129 @@
             "password": "sszy"
           },
           {
-            "email": "ssdns",
+            "email": "sszz",
             "method": "aes-256-gcm",
-            "password": "ssdns"
+            "password": "sszz"
+          },
+          {
+            "email": "ss10011",
+            "method": "aes-256-gcm",
+            "password": "ss10011"
+          },
+          {
+            "email": "ss10012",
+            "method": "aes-256-gcm",
+            "password": "ss10012"
+          },
+          {
+            "email": "ss10021",
+            "method": "aes-256-gcm",
+            "password": "ss10021"
+          },
+          {
+            "email": "ss10022",
+            "method": "aes-256-gcm",
+            "password": "ss10022"
+          },
+          {
+            "email": "ss10031",
+            "method": "aes-256-gcm",
+            "password": "ss10031"
+          },
+          {
+            "email": "ss10032",
+            "method": "aes-256-gcm",
+            "password": "ss10032"
+          },
+          {
+            "email": "ss10041",
+            "method": "aes-256-gcm",
+            "password": "ss10041"
+          },
+          {
+            "email": "ss10042",
+            "method": "aes-256-gcm",
+            "password": "ss10042"
+          },
+          {
+            "email": "ss10051",
+            "method": "aes-256-gcm",
+            "password": "ss10051"
+          },
+          {
+            "email": "ss10052",
+            "method": "aes-256-gcm",
+            "password": "ss10052"
+          },
+          {
+            "email": "ss10061",
+            "method": "aes-256-gcm",
+            "password": "ss10061"
+          },
+          {
+            "email": "ss10062",
+            "method": "aes-256-gcm",
+            "password": "ss10062"
+          },
+          {
+            "email": "ss20011",
+            "method": "aes-256-gcm",
+            "password": "ss20011"
+          },
+          {
+            "email": "ss20012",
+            "method": "aes-256-gcm",
+            "password": "ss20012"
+          },
+          {
+            "email": "ss20021",
+            "method": "aes-256-gcm",
+            "password": "ss20021"
+          },
+          {
+            "email": "ss20022",
+            "method": "aes-256-gcm",
+            "password": "ss20022"
+          },
+          {
+            "email": "ss20031",
+            "method": "aes-256-gcm",
+            "password": "ss20031"
+          },
+          {
+            "email": "ss20032",
+            "method": "aes-256-gcm",
+            "password": "ss20032"
+          },
+          {
+            "email": "ss20041",
+            "method": "aes-256-gcm",
+            "password": "ss20041"
+          },
+          {
+            "email": "ss20042",
+            "method": "aes-256-gcm",
+            "password": "ss20042"
+          },
+          {
+            "email": "ss20051",
+            "method": "aes-256-gcm",
+            "password": "ss20051"
+          },
+          {
+            "email": "ss20052",
+            "method": "aes-256-gcm",
+            "password": "ss20052"
+          },
+          {
+            "email": "ss20061",
+            "method": "aes-256-gcm",
+            "password": "ss20061"
+          },
+          {
+            "email": "ss20062",
+            "method": "aes-256-gcm",
+            "password": "ss20062"
           }
         ],
         "method": "aes-256-gcm",
@@ -631,49 +789,9 @@
             "id": "vl"
           },
           {
-            "email": "vl1",
+            "email": "vldns",
             "flow": "xtls-rprx-vision",
-            "id": "vl1"
-          },
-          {
-            "email": "vl2",
-            "flow": "xtls-rprx-vision",
-            "id": "vl2"
-          },
-          {
-            "email": "vl3",
-            "flow": "xtls-rprx-vision",
-            "id": "vl3"
-          },
-          {
-            "email": "vl4",
-            "flow": "xtls-rprx-vision",
-            "id": "vl4"
-          },
-          {
-            "email": "vl5",
-            "flow": "xtls-rprx-vision",
-            "id": "vl5"
-          },
-          {
-            "email": "vl6",
-            "flow": "xtls-rprx-vision",
-            "id": "vl6"
-          },
-          {
-            "email": "vl7",
-            "flow": "xtls-rprx-vision",
-            "id": "vl7"
-          },
-          {
-            "email": "vl8",
-            "flow": "xtls-rprx-vision",
-            "id": "vl8"
-          },
-          {
-            "email": "vl9",
-            "flow": "xtls-rprx-vision",
-            "id": "vl9"
+            "id": "vldns"
           },
           {
             "email": "vlzy",
@@ -681,9 +799,129 @@
             "id": "vlzy"
           },
           {
-            "email": "vldns",
+            "email": "vlzz",
             "flow": "xtls-rprx-vision",
-            "id": "vldns"
+            "id": "vlzz"
+          },
+          {
+            "email": "vl10011",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10011"
+          },
+          {
+            "email": "vl10012",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10012"
+          },
+          {
+            "email": "vl10021",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10021"
+          },
+          {
+            "email": "vl10022",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10022"
+          },
+          {
+            "email": "vl10031",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10031"
+          },
+          {
+            "email": "vl10032",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10032"
+          },
+          {
+            "email": "vl10041",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10041"
+          },
+          {
+            "email": "vl10042",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10042"
+          },
+          {
+            "email": "vl10051",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10051"
+          },
+          {
+            "email": "vl10052",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10052"
+          },
+          {
+            "email": "vl10061",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10061"
+          },
+          {
+            "email": "vl10062",
+            "flow": "xtls-rprx-vision",
+            "id": "vl10062"
+          },
+          {
+            "email": "vl20011",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20011"
+          },
+          {
+            "email": "vl20012",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20012"
+          },
+          {
+            "email": "vl20021",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20021"
+          },
+          {
+            "email": "vl20022",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20022"
+          },
+          {
+            "email": "vl20031",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20031"
+          },
+          {
+            "email": "vl20032",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20032"
+          },
+          {
+            "email": "vl20041",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20041"
+          },
+          {
+            "email": "vl20042",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20042"
+          },
+          {
+            "email": "vl20051",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20051"
+          },
+          {
+            "email": "vl20052",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20052"
+          },
+          {
+            "email": "vl20061",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20061"
+          },
+          {
+            "email": "vl20062",
+            "flow": "xtls-rprx-vision",
+            "id": "vl20062"
           }
         ],
         "decryption": "none",
@@ -715,24 +953,6 @@
           "xver": 0
         },
         "security": "reality",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tcpSettings": {
           "acceptProxyProtocol": false,
           "header": {
@@ -769,72 +989,118 @@
             "id": "vm"
           },
           {
-            "email": "vm1",
-            "id": "vm1"
-          },
-          {
-            "email": "vm2",
-            "id": "vm2"
-          },
-          {
-            "email": "vm3",
-            "id": "vm3"
-          },
-          {
-            "email": "vm4",
-            "id": "vm4"
-          },
-          {
-            "email": "vm5",
-            "id": "vm5"
-          },
-          {
-            "email": "vm6",
-            "id": "vm6"
-          },
-          {
-            "email": "vm7",
-            "id": "vm7"
-          },
-          {
-            "email": "vm8",
-            "id": "vm8"
-          },
-          {
-            "email": "vm9",
-            "id": "vm9"
+            "email": "vmdns",
+            "id": "vmdns"
           },
           {
             "email": "vmzy",
             "id": "vmzy"
           },
           {
-            "email": "vmdns",
-            "id": "vmdns"
+            "email": "vmzz",
+            "id": "vmzz"
+          },
+          {
+            "email": "vm10011",
+            "id": "vm10011"
+          },
+          {
+            "email": "vm10012",
+            "id": "vm10012"
+          },
+          {
+            "email": "vm10021",
+            "id": "vm10021"
+          },
+          {
+            "email": "vm10022",
+            "id": "vm10022"
+          },
+          {
+            "email": "vm10031",
+            "id": "vm10031"
+          },
+          {
+            "email": "vm10032",
+            "id": "vm10032"
+          },
+          {
+            "email": "vm10041",
+            "id": "vm10041"
+          },
+          {
+            "email": "vm10042",
+            "id": "vm10042"
+          },
+          {
+            "email": "vm10051",
+            "id": "vm10051"
+          },
+          {
+            "email": "vm10052",
+            "id": "vm10052"
+          },
+          {
+            "email": "vm10061",
+            "id": "vm10061"
+          },
+          {
+            "email": "vm10062",
+            "id": "vm10062"
+          },
+          {
+            "email": "vm20011",
+            "id": "vm20011"
+          },
+          {
+            "email": "vm20012",
+            "id": "vm20012"
+          },
+          {
+            "email": "vm20021",
+            "id": "vm20021"
+          },
+          {
+            "email": "vm20022",
+            "id": "vm20022"
+          },
+          {
+            "email": "vm20031",
+            "id": "vm20031"
+          },
+          {
+            "email": "vm20032",
+            "id": "vm20032"
+          },
+          {
+            "email": "vm20041",
+            "id": "vm20041"
+          },
+          {
+            "email": "vm20042",
+            "id": "vm20042"
+          },
+          {
+            "email": "vm20051",
+            "id": "vm20051"
+          },
+          {
+            "email": "vm20052",
+            "id": "vm20052"
+          },
+          {
+            "email": "vm20061",
+            "id": "vm20061"
+          },
+          {
+            "email": "vm20062",
+            "id": "vm20062"
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
         "security": "tls",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tlsSettings": {
           "alpn": [],
           "certificates": [
@@ -892,49 +1158,9 @@
             "password": "tr"
           },
           {
-            "email": "tr1",
+            "email": "trdns",
             "flow": "",
-            "password": "tr1"
-          },
-          {
-            "email": "tr2",
-            "flow": "",
-            "password": "tr2"
-          },
-          {
-            "email": "tr3",
-            "flow": "",
-            "password": "tr3"
-          },
-          {
-            "email": "tr4",
-            "flow": "",
-            "password": "tr4"
-          },
-          {
-            "email": "tr5",
-            "flow": "",
-            "password": "tr5"
-          },
-          {
-            "email": "tr6",
-            "flow": "",
-            "password": "tr6"
-          },
-          {
-            "email": "tr7",
-            "flow": "",
-            "password": "tr7"
-          },
-          {
-            "email": "tr8",
-            "flow": "",
-            "password": "tr8"
-          },
-          {
-            "email": "tr9",
-            "flow": "",
-            "password": "tr9"
+            "password": "trdns"
           },
           {
             "email": "trzy",
@@ -942,9 +1168,129 @@
             "password": "trzy"
           },
           {
-            "email": "trdns",
+            "email": "trzz",
             "flow": "",
-            "password": "trdns"
+            "password": "trzz"
+          },
+          {
+            "email": "tr10011",
+            "flow": "",
+            "password": "tr10011"
+          },
+          {
+            "email": "tr10012",
+            "flow": "",
+            "password": "tr10012"
+          },
+          {
+            "email": "tr10021",
+            "flow": "",
+            "password": "tr10021"
+          },
+          {
+            "email": "tr10022",
+            "flow": "",
+            "password": "tr10022"
+          },
+          {
+            "email": "tr10031",
+            "flow": "",
+            "password": "tr10031"
+          },
+          {
+            "email": "tr10032",
+            "flow": "",
+            "password": "tr10032"
+          },
+          {
+            "email": "tr10041",
+            "flow": "",
+            "password": "tr10041"
+          },
+          {
+            "email": "tr10042",
+            "flow": "",
+            "password": "tr10042"
+          },
+          {
+            "email": "tr10051",
+            "flow": "",
+            "password": "tr10051"
+          },
+          {
+            "email": "tr10052",
+            "flow": "",
+            "password": "tr10052"
+          },
+          {
+            "email": "tr10061",
+            "flow": "",
+            "password": "tr10061"
+          },
+          {
+            "email": "tr10062",
+            "flow": "",
+            "password": "tr10062"
+          },
+          {
+            "email": "tr20011",
+            "flow": "",
+            "password": "tr20011"
+          },
+          {
+            "email": "tr20012",
+            "flow": "",
+            "password": "tr20012"
+          },
+          {
+            "email": "tr20021",
+            "flow": "",
+            "password": "tr20021"
+          },
+          {
+            "email": "tr20022",
+            "flow": "",
+            "password": "tr20022"
+          },
+          {
+            "email": "tr20031",
+            "flow": "",
+            "password": "tr20031"
+          },
+          {
+            "email": "tr20032",
+            "flow": "",
+            "password": "tr20032"
+          },
+          {
+            "email": "tr20041",
+            "flow": "",
+            "password": "tr20041"
+          },
+          {
+            "email": "tr20042",
+            "flow": "",
+            "password": "tr20042"
+          },
+          {
+            "email": "tr20051",
+            "flow": "",
+            "password": "tr20051"
+          },
+          {
+            "email": "tr20052",
+            "flow": "",
+            "password": "tr20052"
+          },
+          {
+            "email": "tr20061",
+            "flow": "",
+            "password": "tr20061"
+          },
+          {
+            "email": "tr20062",
+            "flow": "",
+            "password": "tr20062"
           }
         ],
         "fallbacks": []
@@ -957,24 +1303,6 @@
         },
         "network": "grpc",
         "security": "tls",
-        "sockopt": {
-          "V6Only": false,
-          "acceptProxyProtocol": false,
-          "dialerProxy": "",
-          "domainStrategy": "UseIP",
-          "interface": "",
-          "mark": 0,
-          "tcpFastOpen": true,
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 0,
-          "tcpMaxSeg": 1440,
-          "tcpMptcp": true,
-          "tcpNoDelay": true,
-          "tcpUserTimeout": 10000,
-          "tcpWindowClamp": 600,
-          "tcpcongestion": "bbr",
-          "tproxy": "off"
-        },
         "tlsSettings": {
           "alpn": [],
           "certificates": [
@@ -1034,7 +1362,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "9000-DNS进站WG-",
+      "tag": "9000-DNS-WG入站-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1068,7 +1396,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10011-坑位1-智能-",
+      "tag": "10011-坑位1-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1102,7 +1430,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10012-坑位1-动态-",
+      "tag": "10012-坑位1-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1136,7 +1464,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10013-坑位1-静态-",
+      "tag": "10013-坑位1-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1170,7 +1498,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10021-坑位2-智能-",
+      "tag": "10021-坑位2-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1204,7 +1532,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10022-坑位2-动态-",
+      "tag": "10022-坑位2-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1238,7 +1566,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10023-坑位2-静态-",
+      "tag": "10023-坑位2-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1272,7 +1600,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10031-坑位3-智能-",
+      "tag": "10031-坑位3-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1306,7 +1634,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10032-坑位3-动态-",
+      "tag": "10032-坑位3-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1340,7 +1668,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10033-坑位3-静态-",
+      "tag": "10033-坑位3-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1374,7 +1702,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10041-坑位4-智能-",
+      "tag": "10041-坑位4-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1408,7 +1736,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10042-坑位4-动态-",
+      "tag": "10042-坑位4-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1442,7 +1770,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10043-坑位4-静态-",
+      "tag": "10043-坑位4-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1476,7 +1804,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10051-坑位5-智能-",
+      "tag": "10051-坑位5-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1510,7 +1838,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10052-坑位5-动态-",
+      "tag": "10052-坑位5-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1544,7 +1872,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10053-坑位5-静态-",
+      "tag": "10053-坑位5-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1578,7 +1906,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10061-坑位6-智能-",
+      "tag": "10061-坑位6-线路1-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1612,7 +1940,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10062-坑位6-动态-",
+      "tag": "10062-坑位6-线路2-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1646,7 +1974,7 @@
         "kernelMode": false
       },
       "streamSettings": null,
-      "tag": "10063-坑位6-静态-",
+      "tag": "10063-坑位6-智能-",
       "sniffing": {
         "enabled": true,
         "destOverride": [
@@ -1675,313 +2003,7 @@
       "tag": "blocked"
     },
     {
-      "tag": "DNS出站线路-01-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm",
-            "uot": false
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "DNS出站线路-02-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm",
-            "uot": false
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "DNS出站线路-03-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm",
-            "uot": false
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "DNS出站线路-04-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "DNS出站线路-05-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "DNS出站线路-06-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ssdns",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-01-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-02-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-03-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-04-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-05-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "中转线路-06-",
-      "protocol": "shadowsocks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8600,
-            "password": "ss",
-            "method": "aes-256-gcm"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "坑位1-动态S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 4950,
-            "users": [
-              {
-                "user": "A36Oa9Fb8I-zone-abc-region-US-session-rkeNJr4h-sessTime-120",
-                "pass": "07438554"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "中转线路-01-",
-          "tcpFastOpen": false,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": false,
-          "tcpNoDelay": false
-        }
-      }
-    },
-    {
-      "tag": "坑位1-S5-",
+      "tag": "示例-sk-",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -1990,8 +2012,8 @@
             "port": 8500,
             "users": [
               {
-                "user": "A36Oa9Fb8I-zone-abc-region-US-session-Pn8NpwwK-sessTime-120",
-                "pass": "07438554"
+                "user": "sk",
+                "pass": "sk"
               }
             ]
           }
@@ -1999,14 +2021,14 @@
       }
     },
     {
-      "tag": "坑位1-SS-",
+      "tag": "示例-ss-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss1",
+            "password": "ss",
             "method": "aes-256-gcm",
             "uot": false
           }
@@ -2023,7 +2045,7 @@
       }
     },
     {
-      "tag": "坑位1-VL-",
+      "tag": "示例-vl-",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -2058,7 +2080,7 @@
       }
     },
     {
-      "tag": "坑位1-VM-",
+      "tag": "示例-vm-",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -2090,7 +2112,7 @@
       }
     },
     {
-      "tag": "坑位1-TR-",
+      "tag": "示例-tr-",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -2118,59 +2140,14 @@
       }
     },
     {
-      "tag": "坑位2-动态S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 4950,
-            "users": [
-              {
-                "user": "A36Oa9Fb8I-zone-abc-region-US-session-KMQxDrPA-sessTime-120",
-                "pass": "07438554"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "中转线路-01-",
-          "tcpFastOpen": false,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": false,
-          "tcpNoDelay": false
-        }
-      }
-    },
-    {
-      "tag": "坑位2-S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8500,
-            "users": [
-              {
-                "user": "sock",
-                "pass": "sock"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "tag": "坑位2-SS-",
+      "tag": "DNS出站-1-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss2",
+            "password": "ssdns",
             "method": "aes-256-gcm",
             "uot": false
           }
@@ -2187,163 +2164,14 @@
       }
     },
     {
-      "tag": "坑位2-VL-",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8700,
-            "users": [
-              {
-                "id": "vl",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "IfbuJiRUB2WHGa4SecExlktgpl9wsB4FMGq0vxGjVTU",
-          "fingerprint": "random",
-          "serverName": "yahoo.com",
-          "shortId": "ac",
-          "spiderX": "/"
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "坑位2-VM-",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8800,
-            "users": [
-              {
-                "id": "vm",
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "wsSettings": {
-          "path": "/",
-          "host": ""
-        }
-      }
-    },
-    {
-      "tag": "坑位2-TR-",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8900,
-            "password": "tr"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "authority": "",
-          "multiMode": false
-        }
-      }
-    },
-    {
-      "tag": "坑位3-动态S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 4950,
-            "users": [
-              {
-                "user": "A36Oa9Fb8I-zone-abc-region-US-session-jSZcraCc-sessTime-120",
-                "pass": "07438554"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "中转线路-01-",
-          "tcpFastOpen": false,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": false,
-          "tcpNoDelay": false
-        }
-      }
-    },
-    {
-      "tag": "坑位3-S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8500,
-            "users": [
-              {
-                "user": "sock",
-                "pass": "sock"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "",
-          "tcpFastOpen": true,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": true,
-          "tcpNoDelay": true
-        }
-      }
-    },
-    {
-      "tag": "坑位3-SS-",
+      "tag": "DNS出站-2-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss3",
+            "password": "ssdns",
             "method": "aes-256-gcm",
             "uot": false
           }
@@ -2360,154 +2188,14 @@
       }
     },
     {
-      "tag": "坑位3-VL-",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8700,
-            "users": [
-              {
-                "id": "vl",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "IfbuJiRUB2WHGa4SecExlktgpl9wsB4FMGq0vxGjVTU",
-          "fingerprint": "random",
-          "serverName": "yahoo.com",
-          "shortId": "ac",
-          "spiderX": "/"
-        },
-        "tcpSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "坑位3-VM-",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8800,
-            "users": [
-              {
-                "id": "vm",
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "wsSettings": {
-          "path": "/",
-          "host": ""
-        }
-      }
-    },
-    {
-      "tag": "坑位3-TR-",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8900,
-            "password": "tr"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "authority": "",
-          "multiMode": false
-        }
-      }
-    },
-    {
-      "tag": "坑位4-动态S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 4950,
-            "users": [
-              {
-                "user": "A36Oa9Fb8I-zone-abc-region-US-session-PMRmGGK4-sessTime-120",
-                "pass": "07438554"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "sockopt": {
-          "dialerProxy": "中转线路-01-",
-          "tcpFastOpen": false,
-          "tcpKeepAliveInterval": 0,
-          "tcpMptcp": false,
-          "tcpNoDelay": false
-        }
-      }
-    },
-    {
-      "tag": "坑位4-S5-",
-      "protocol": "socks",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8500,
-            "users": [
-              {
-                "user": "sock",
-                "pass": "sock"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "tag": "坑位4-SS-",
+      "tag": "DNS出站-3-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
             "port": 8600,
-            "password": "ss4",
+            "password": "ssdns",
             "method": "aes-256-gcm",
             "uot": false
           }
@@ -2524,33 +2212,21 @@
       }
     },
     {
-      "tag": "坑位4-VL-",
-      "protocol": "vless",
+      "tag": "DNS出站-4-",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
             "address": "代理",
-            "port": 8700,
-            "users": [
-              {
-                "id": "vl",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none"
-              }
-            ]
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
           }
         ]
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "IfbuJiRUB2WHGa4SecExlktgpl9wsB4FMGq0vxGjVTU",
-          "fingerprint": "random",
-          "serverName": "yahoo.com",
-          "shortId": "ac",
-          "spiderX": "/"
-        },
+        "security": "none",
         "tcpSettings": {
           "header": {
             "type": "none"
@@ -2559,77 +2235,225 @@
       }
     },
     {
-      "tag": "坑位4-VM-",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8800,
-            "users": [
-              {
-                "id": "vm",
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "wsSettings": {
-          "path": "/",
-          "host": ""
-        }
-      }
-    },
-    {
-      "tag": "坑位4-TR-",
-      "protocol": "trojan",
+      "tag": "DNS出站-5-",
+      "protocol": "shadowsocks",
       "settings": {
         "servers": [
           {
             "address": "代理",
-            "port": 8900,
-            "password": "tr"
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "authority": "",
-          "multiMode": false
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       }
     },
     {
-      "tag": "坑位5-动态S5-",
+      "tag": "DNS出站-6-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ssdns",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-1-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-3-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-4-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-5-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "中转-6-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "sszz",
+            "method": "aes-256-gcm"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位1-动态远端中转-1-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10011",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位1-动态本地中转-1-",
       "protocol": "socks",
       "settings": {
         "servers": [
           {
             "address": "代理",
-            "port": 4950,
+            "port": 1000,
             "users": [
               {
-                "user": "用户名",
-                "pass": "07438554"
+                "user": "luckzy001_area-SA_session-aa10011_life-120",
+                "pass": "888888"
               }
             ]
           }
@@ -2637,7 +2461,7 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转线路-01-",
+          "dialerProxy": "中转-1-",
           "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
           "tcpMptcp": false,
@@ -2646,7 +2470,94 @@
       }
     },
     {
-      "tag": "坑位5-S5-",
+      "tag": "坑位1-动态端口中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10011_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位1-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10012",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位1-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10012_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位1-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10012_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位1-sk-",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -2655,8 +2566,8 @@
             "port": 8500,
             "users": [
               {
-                "user": "sock",
-                "pass": "sock"
+                "user": "sk",
+                "pass": "sk"
               }
             ]
           }
@@ -2664,7 +2575,7 @@
       }
     },
     {
-      "tag": "坑位5-SS-",
+      "tag": "坑位1-ss-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2688,33 +2599,22 @@
       }
     },
     {
-      "tag": "坑位5-VL-",
-      "protocol": "vless",
+      "tag": "坑位2-动态远端中转-1-",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
             "address": "代理",
-            "port": 8700,
-            "users": [
-              {
-                "id": "vl",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none"
-              }
-            ]
+            "port": 8600,
+            "password": "ss10021",
+            "method": "aes-256-gcm",
+            "uot": false
           }
         ]
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "IfbuJiRUB2WHGa4SecExlktgpl9wsB4FMGq0vxGjVTU",
-          "fingerprint": "random",
-          "serverName": "yahoo.com",
-          "shortId": "ac",
-          "spiderX": "/"
-        },
+        "security": "none",
         "tcpSettings": {
           "header": {
             "type": "none"
@@ -2723,77 +2623,17 @@
       }
     },
     {
-      "tag": "坑位5-VM-",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "代理",
-            "port": 8800,
-            "users": [
-              {
-                "id": "vm",
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "wsSettings": {
-          "path": "/",
-          "host": ""
-        }
-      }
-    },
-    {
-      "tag": "坑位5-TR-",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "代理",
-            "port": 8900,
-            "password": "tr"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "authority": "",
-          "multiMode": false
-        }
-      }
-    },
-    {
-      "tag": "坑位6-动态S5-",
+      "tag": "坑位2-动态本地中转-1-",
       "protocol": "socks",
       "settings": {
         "servers": [
           {
             "address": "代理",
-            "port": 4950,
+            "port": 1000,
             "users": [
               {
-                "user": "用户名",
-                "pass": "07438554"
+                "user": "luckzy001_area-SA_session-aa10021_life-120",
+                "pass": "888888"
               }
             ]
           }
@@ -2801,7 +2641,7 @@
       },
       "streamSettings": {
         "sockopt": {
-          "dialerProxy": "中转线路-01-",
+          "dialerProxy": "中转-1-",
           "tcpFastOpen": false,
           "tcpKeepAliveInterval": 0,
           "tcpMptcp": false,
@@ -2810,7 +2650,94 @@
       }
     },
     {
-      "tag": "坑位6-S5-",
+      "tag": "坑位2-动态端口中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10021_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位2-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10022",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位2-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10022_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位2-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10022_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位2-sk-",
       "protocol": "socks",
       "settings": {
         "servers": [
@@ -2819,8 +2746,8 @@
             "port": 8500,
             "users": [
               {
-                "user": "sock",
-                "pass": "sock"
+                "user": "sk",
+                "pass": "sk"
               }
             ]
           }
@@ -2828,7 +2755,7 @@
       }
     },
     {
-      "tag": "坑位6-SS-",
+      "tag": "坑位2-ss-",
       "protocol": "shadowsocks",
       "settings": {
         "servers": [
@@ -2852,33 +2779,22 @@
       }
     },
     {
-      "tag": "坑位6-VL-",
-      "protocol": "vless",
+      "tag": "坑位3-动态远端中转-1-",
+      "protocol": "shadowsocks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
             "address": "代理",
-            "port": 8700,
-            "users": [
-              {
-                "id": "vl",
-                "flow": "xtls-rprx-vision",
-                "encryption": "none"
-              }
-            ]
+            "port": 8600,
+            "password": "ss10031",
+            "method": "aes-256-gcm",
+            "uot": false
           }
         ]
       },
       "streamSettings": {
         "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "publicKey": "IfbuJiRUB2WHGa4SecExlktgpl9wsB4FMGq0vxGjVTU",
-          "fingerprint": "random",
-          "serverName": "yahoo.com",
-          "shortId": "ac",
-          "spiderX": "/"
-        },
+        "security": "none",
         "tcpSettings": {
           "header": {
             "type": "none"
@@ -2887,62 +2803,698 @@
       }
     },
     {
-      "tag": "坑位6-VM-",
-      "protocol": "vmess",
+      "tag": "坑位3-动态本地中转-1-",
+      "protocol": "socks",
       "settings": {
-        "vnext": [
+        "servers": [
           {
             "address": "代理",
-            "port": 8800,
+            "port": 1000,
             "users": [
               {
-                "id": "vm",
-                "security": "auto"
+                "user": "luckzy001_area-SA_session-aa10031_life-120",
+                "pass": "888888"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "wsSettings": {
-          "path": "/",
-          "host": ""
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
         }
       }
     },
     {
-      "tag": "坑位6-TR-",
-      "protocol": "trojan",
+      "tag": "坑位3-动态端口中转-1-",
+      "protocol": "socks",
       "settings": {
         "servers": [
           {
             "address": "代理",
-            "port": 8900,
-            "password": "tr"
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10031_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位3-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10032",
+            "method": "aes-256-gcm",
+            "uot": false
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "www.bing.com",
-          "alpn": [],
-          "fingerprint": "",
-          "allowInsecure": true
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "authority": "",
-          "multiMode": false
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位3-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10032_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位3-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10032_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位3-sk-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8500,
+            "users": [
+              {
+                "user": "sk",
+                "pass": "sk"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位3-ss-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位4-动态远端中转-1-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10041",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位4-动态本地中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10041_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位4-动态端口中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10041_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位4-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10042",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位4-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10042_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位4-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10042_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位4-sk-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8500,
+            "users": [
+              {
+                "user": "sk",
+                "pass": "sk"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位4-ss-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位5-动态远端中转-1-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10051",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位5-动态本地中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10051_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位5-动态端口中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10051_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位5-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10052",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位5-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10052_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位5-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10052_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位5-sk-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8500,
+            "users": [
+              {
+                "user": "sk",
+                "pass": "sk"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位5-ss-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位6-动态远端中转-1-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10061",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位6-动态本地中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10061_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位6-动态端口中转-1-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-SA_session-aa10061_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位6-动态远端中转-2-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss10062",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "tag": "坑位6-动态本地中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10062_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "中转-1-",
+          "tcpFastOpen": false,
+          "tcpKeepAliveInterval": 0,
+          "tcpMptcp": false,
+          "tcpNoDelay": false
+        }
+      }
+    },
+    {
+      "tag": "坑位6-动态端口中转-2-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 1000,
+            "users": [
+              {
+                "user": "luckzy001_area-KW_session-aa10062_life-120",
+                "pass": "888888"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位6-sk-",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8500,
+            "users": [
+              {
+                "user": "sk",
+                "pass": "sk"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tag": "坑位6-ss-",
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "代理",
+            "port": 8600,
+            "password": "ss",
+            "method": "aes-256-gcm",
+            "uot": false
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       }
     }
@@ -2972,12 +3524,7 @@
   },
   "stats": {},
   "reverse": null,
-  "fakedns": [
-    {
-      "ipPool": "198.18.0.0/16",
-      "poolSize": 65535
-    }
-  ],
+  "fakedns": null,
   "observatory": null,
   "burstObservatory": null
 }
