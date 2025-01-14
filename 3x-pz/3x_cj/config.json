@@ -10,25 +10,25 @@
     "domainStrategy": "AsIs",
     "rules": [
       {
+        "type": "field",
         "inboundTag": [
           "api"
         ],
-        "outboundTag": "api",
-        "type": "field"
+        "outboundTag": "api"
       },
       {
+        "type": "field",
+        "outboundTag": "blocked",
         "ip": [
           "geoip:private"
-        ],
-        "outboundTag": "blocked",
-        "type": "field"
+        ]
       },
       {
+        "type": "field",
         "outboundTag": "blocked",
         "protocol": [
           "bittorrent"
-        ],
-        "type": "field"
+        ]
       }
     ]
   },
@@ -48,7 +48,7 @@
     },
     {
       "listen": null,
-      "port": 8100,
+      "port": 9400,
       "protocol": "wireguard",
       "settings": {
         "mtu": 1420,
@@ -63,252 +63,12 @@
             "keepAlive": 0
           }
         ],
-        "kernelMode": false
+        "noKernelTun": false
       },
       "streamSettings": null,
-      "tag": "inbound-8100",
+      "tag": "inbound-9400",
       "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 8200,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "inbound-8200",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 8300,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "inbound-8300",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 8400,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "inbound-8400",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 8500,
-      "protocol": "socks",
-      "settings": {
-        "auth": "password",
-        "accounts": [
-          {
-            "user": "sk",
-            "pass": "sk"
-          },
-          {
-            "user": "skdns",
-            "pass": "skdns"
-          },
-          {
-            "user": "skzy",
-            "pass": "skzy"
-          },
-          {
-            "user": "skzz",
-            "pass": "skzz"
-          },
-          {
-            "user": "sk10011",
-            "pass": "sk10011"
-          },
-          {
-            "user": "sk10012",
-            "pass": "sk10012"
-          },
-          {
-            "user": "sk10021",
-            "pass": "sk10021"
-          },
-          {
-            "user": "sk10022",
-            "pass": "sk10022"
-          },
-          {
-            "user": "sk10031",
-            "pass": "sk10031"
-          },
-          {
-            "user": "sk10032",
-            "pass": "sk10032"
-          },
-          {
-            "user": "sk10041",
-            "pass": "sk10041"
-          },
-          {
-            "user": "sk10042",
-            "pass": "sk10042"
-          },
-          {
-            "user": "sk10051",
-            "pass": "sk10051"
-          },
-          {
-            "user": "sk10052",
-            "pass": "sk10052"
-          },
-          {
-            "user": "sk10061",
-            "pass": "sk10061"
-          },
-          {
-            "user": "sk10062",
-            "pass": "sk10062"
-          },
-          {
-            "user": "sk20011",
-            "pass": "sk20011"
-          },
-          {
-            "user": "sk20012",
-            "pass": "sk20012"
-          },
-          {
-            "user": "sk20021",
-            "pass": "sk20021"
-          },
-          {
-            "user": "sk20022",
-            "pass": "sk20022"
-          },
-          {
-            "user": "sk20031",
-            "pass": "sk20031"
-          },
-          {
-            "user": "sk20032",
-            "pass": "sk20032"
-          },
-          {
-            "user": "sk20041",
-            "pass": "sk20041"
-          },
-          {
-            "user": "sk20042",
-            "pass": "sk20042"
-          },
-          {
-            "user": "sk20051",
-            "pass": "sk20051"
-          },
-          {
-            "user": "sk20052",
-            "pass": "sk20052"
-          },
-          {
-            "user": "sk20061",
-            "pass": "sk20061"
-          },
-          {
-            "user": "sk20062",
-            "pass": "sk20062"
-          }
-        ],
-        "udp": true,
-        "ip": "127.0.0.1"
-      },
-      "streamSettings": null,
-      "tag": "inbound-8500",
-      "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls",
@@ -326,7 +86,49 @@
     },
     {
       "listen": null,
-      "port": 8600,
+      "port": 9500,
+      "protocol": "socks",
+      "settings": {
+        "auth": "password",
+        "accounts": [
+          {
+            "user": "sk",
+            "pass": "sk"
+          },
+          {
+            "user": "sk1",
+            "pass": "sk1"
+          },
+          {
+            "user": "sk2",
+            "pass": "sk2"
+          }
+        ],
+        "udp": true,
+        "ip": "127.0.0.1"
+      },
+      "streamSettings": null,
+      "tag": "inbound-9500",
+      "sniffing": {
+        "enabled": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic",
+          "fakedns"
+        ],
+        "metadataOnly": false,
+        "routeOnly": false
+      },
+      "allocate": {
+        "strategy": "always",
+        "refresh": 5,
+        "concurrency": 3
+      }
+    },
+    {
+      "listen": null,
+      "port": 9600,
       "protocol": "shadowsocks",
       "settings": {
         "clients": [
@@ -336,144 +138,20 @@
             "password": "ss"
           },
           {
-            "email": "ssdns",
+            "email": "ss1",
             "method": "aes-256-gcm",
-            "password": "ssdns"
+            "password": "ss1"
           },
           {
-            "email": "sszy",
+            "email": "ss2",
             "method": "aes-256-gcm",
-            "password": "sszy"
-          },
-          {
-            "email": "sszz",
-            "method": "aes-256-gcm",
-            "password": "sszz"
-          },
-          {
-            "email": "ss10011",
-            "method": "aes-256-gcm",
-            "password": "ss10011"
-          },
-          {
-            "email": "ss10012",
-            "method": "aes-256-gcm",
-            "password": "ss10012"
-          },
-          {
-            "email": "ss10021",
-            "method": "aes-256-gcm",
-            "password": "ss10021"
-          },
-          {
-            "email": "ss10022",
-            "method": "aes-256-gcm",
-            "password": "ss10022"
-          },
-          {
-            "email": "ss10031",
-            "method": "aes-256-gcm",
-            "password": "ss10031"
-          },
-          {
-            "email": "ss10032",
-            "method": "aes-256-gcm",
-            "password": "ss10032"
-          },
-          {
-            "email": "ss10041",
-            "method": "aes-256-gcm",
-            "password": "ss10041"
-          },
-          {
-            "email": "ss10042",
-            "method": "aes-256-gcm",
-            "password": "ss10042"
-          },
-          {
-            "email": "ss10051",
-            "method": "aes-256-gcm",
-            "password": "ss10051"
-          },
-          {
-            "email": "ss10052",
-            "method": "aes-256-gcm",
-            "password": "ss10052"
-          },
-          {
-            "email": "ss10061",
-            "method": "aes-256-gcm",
-            "password": "ss10061"
-          },
-          {
-            "email": "ss10062",
-            "method": "aes-256-gcm",
-            "password": "ss10062"
-          },
-          {
-            "email": "ss20011",
-            "method": "aes-256-gcm",
-            "password": "ss20011"
-          },
-          {
-            "email": "ss20012",
-            "method": "aes-256-gcm",
-            "password": "ss20012"
-          },
-          {
-            "email": "ss20021",
-            "method": "aes-256-gcm",
-            "password": "ss20021"
-          },
-          {
-            "email": "ss20022",
-            "method": "aes-256-gcm",
-            "password": "ss20022"
-          },
-          {
-            "email": "ss20031",
-            "method": "aes-256-gcm",
-            "password": "ss20031"
-          },
-          {
-            "email": "ss20032",
-            "method": "aes-256-gcm",
-            "password": "ss20032"
-          },
-          {
-            "email": "ss20041",
-            "method": "aes-256-gcm",
-            "password": "ss20041"
-          },
-          {
-            "email": "ss20042",
-            "method": "aes-256-gcm",
-            "password": "ss20042"
-          },
-          {
-            "email": "ss20051",
-            "method": "aes-256-gcm",
-            "password": "ss20051"
-          },
-          {
-            "email": "ss20052",
-            "method": "aes-256-gcm",
-            "password": "ss20052"
-          },
-          {
-            "email": "ss20061",
-            "method": "aes-256-gcm",
-            "password": "ss20061"
-          },
-          {
-            "email": "ss20062",
-            "method": "aes-256-gcm",
-            "password": "ss20062"
+            "password": "ss2"
           }
         ],
+        "ivCheck": false,
         "method": "aes-256-gcm",
         "network": "tcp,udp",
-        "password": "RNi10DOzqCwPF22b1tkZTSpPKXsSUIMlkqousPlFxuw="
+        "password": "fJuklvx/dIXoOC46YRZhGbIAnsLzA3RbhS/wzVJmam0="
       },
       "streamSettings": {
         "network": "tcp",
@@ -485,9 +163,9 @@
           }
         }
       },
-      "tag": "inbound-8600",
+      "tag": "inbound-9600",
       "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls",
@@ -505,190 +183,69 @@
     },
     {
       "listen": null,
-      "port": 8700,
+      "port": 9700,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
             "email": "vl",
-            "flow": "xtls-rprx-vision",
+            "flow": "",
             "id": "vl"
           },
           {
-            "email": "vldns",
-            "flow": "xtls-rprx-vision",
-            "id": "vldns"
+            "email": "vl1",
+            "flow": "",
+            "id": "vl1"
           },
           {
-            "email": "vlzy",
-            "flow": "xtls-rprx-vision",
-            "id": "vlzy"
-          },
-          {
-            "email": "vlzz",
-            "flow": "xtls-rprx-vision",
-            "id": "vlzz"
-          },
-          {
-            "email": "vl10011",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10011"
-          },
-          {
-            "email": "vl10012",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10012"
-          },
-          {
-            "email": "vl10021",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10021"
-          },
-          {
-            "email": "vl10022",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10022"
-          },
-          {
-            "email": "vl10031",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10031"
-          },
-          {
-            "email": "vl10032",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10032"
-          },
-          {
-            "email": "vl10041",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10041"
-          },
-          {
-            "email": "vl10042",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10042"
-          },
-          {
-            "email": "vl10051",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10051"
-          },
-          {
-            "email": "vl10052",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10052"
-          },
-          {
-            "email": "vl10061",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10061"
-          },
-          {
-            "email": "vl10062",
-            "flow": "xtls-rprx-vision",
-            "id": "vl10062"
-          },
-          {
-            "email": "vl20011",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20011"
-          },
-          {
-            "email": "vl20012",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20012"
-          },
-          {
-            "email": "vl20021",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20021"
-          },
-          {
-            "email": "vl20022",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20022"
-          },
-          {
-            "email": "vl20031",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20031"
-          },
-          {
-            "email": "vl20032",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20032"
-          },
-          {
-            "email": "vl20041",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20041"
-          },
-          {
-            "email": "vl20042",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20042"
-          },
-          {
-            "email": "vl20051",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20051"
-          },
-          {
-            "email": "vl20052",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20052"
-          },
-          {
-            "email": "vl20061",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20061"
-          },
-          {
-            "email": "vl20062",
-            "flow": "xtls-rprx-vision",
-            "id": "vl20062"
+            "email": "vl2",
+            "flow": "",
+            "id": "vl2"
           }
         ],
         "decryption": "none",
         "fallbacks": []
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "xhttp",
         "realitySettings": {
           "dest": "yahoo.com:443",
           "maxClient": "",
           "maxTimediff": 0,
           "minClient": "",
-          "privateKey": "INY-TGr3xkGcjaZ6iSiOnvk6ewwBSjkf48UuTvZ3hgg",
+          "privateKey": "UJluXTHWdlAITpgveoIaP1lP3GtN0X20S0KCEsubilU",
           "serverNames": [
             "yahoo.com",
             "www.yahoo.com"
           ],
           "shortIds": [
-            "ac",
-            "447db456",
-            "1d8c90",
-            "d50e",
-            "8e6c81caa759fb",
-            "ab264b0860e7d99d",
-            "29a870e967",
-            "ede6fbd622ae"
+            "bf",
+            "fb3bb9",
+            "f24a359fe74f72a2",
+            "ff609ef8",
+            "7a64",
+            "63f4cc949d15",
+            "fdb1fc3e14",
+            "6d036d76a19fec"
           ],
           "show": false,
           "xver": 0
         },
         "security": "reality",
-        "tcpSettings": {
-          "acceptProxyProtocol": false,
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "headers": {},
+          "host": "",
+          "mode": "auto",
+          "noSSEHeader": false,
+          "path": "/vless",
+          "scMaxBufferedPosts": 30,
+          "scMaxEachPostBytes": "1000000",
+          "xPaddingBytes": "100-1000"
         }
       },
-      "tag": "inbound-8700",
+      "tag": "inbound-9700",
       "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls",
@@ -706,7 +263,7 @@
     },
     {
       "listen": null,
-      "port": 8800,
+      "port": 9800,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -715,112 +272,12 @@
             "id": "vm"
           },
           {
-            "email": "vmdns",
-            "id": "vmdns"
+            "email": "vm1",
+            "id": "vm1"
           },
           {
-            "email": "vmzy",
-            "id": "vmzy"
-          },
-          {
-            "email": "vmzz",
-            "id": "vmzz"
-          },
-          {
-            "email": "vm10011",
-            "id": "vm10011"
-          },
-          {
-            "email": "vm10012",
-            "id": "vm10012"
-          },
-          {
-            "email": "vm10021",
-            "id": "vm10021"
-          },
-          {
-            "email": "vm10022",
-            "id": "vm10022"
-          },
-          {
-            "email": "vm10031",
-            "id": "vm10031"
-          },
-          {
-            "email": "vm10032",
-            "id": "vm10032"
-          },
-          {
-            "email": "vm10041",
-            "id": "vm10041"
-          },
-          {
-            "email": "vm10042",
-            "id": "vm10042"
-          },
-          {
-            "email": "vm10051",
-            "id": "vm10051"
-          },
-          {
-            "email": "vm10052",
-            "id": "vm10052"
-          },
-          {
-            "email": "vm10061",
-            "id": "vm10061"
-          },
-          {
-            "email": "vm10062",
-            "id": "vm10062"
-          },
-          {
-            "email": "vm20011",
-            "id": "vm20011"
-          },
-          {
-            "email": "vm20012",
-            "id": "vm20012"
-          },
-          {
-            "email": "vm20021",
-            "id": "vm20021"
-          },
-          {
-            "email": "vm20022",
-            "id": "vm20022"
-          },
-          {
-            "email": "vm20031",
-            "id": "vm20031"
-          },
-          {
-            "email": "vm20032",
-            "id": "vm20032"
-          },
-          {
-            "email": "vm20041",
-            "id": "vm20041"
-          },
-          {
-            "email": "vm20042",
-            "id": "vm20042"
-          },
-          {
-            "email": "vm20051",
-            "id": "vm20051"
-          },
-          {
-            "email": "vm20052",
-            "id": "vm20052"
-          },
-          {
-            "email": "vm20061",
-            "id": "vm20061"
-          },
-          {
-            "email": "vm20062",
-            "id": "vm20062"
+            "email": "vm2",
+            "id": "vm2"
           }
         ]
       },
@@ -828,7 +285,11 @@
         "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "alpn": [],
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
           "certificates": [
             {
               "buildChain": false,
@@ -850,13 +311,14 @@
         "wsSettings": {
           "acceptProxyProtocol": false,
           "headers": {},
+          "heartbeatPeriod": 0,
           "host": "",
-          "path": "/"
+          "path": "/vmess"
         }
       },
-      "tag": "inbound-8800",
+      "tag": "inbound-9800",
       "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls",
@@ -874,163 +336,34 @@
     },
     {
       "listen": null,
-      "port": 8900,
+      "port": 9900,
       "protocol": "trojan",
       "settings": {
         "clients": [
           {
             "email": "tr",
-            "flow": "",
             "password": "tr"
           },
           {
-            "email": "trdns",
-            "flow": "",
-            "password": "trdns"
+            "email": "tr1",
+            "password": "tr1"
           },
           {
-            "email": "trzy",
-            "flow": "",
-            "password": "trzy"
-          },
-          {
-            "email": "trzz",
-            "flow": "",
-            "password": "trzz"
-          },
-          {
-            "email": "tr10011",
-            "flow": "",
-            "password": "tr10011"
-          },
-          {
-            "email": "tr10012",
-            "flow": "",
-            "password": "tr10012"
-          },
-          {
-            "email": "tr10021",
-            "flow": "",
-            "password": "tr10021"
-          },
-          {
-            "email": "tr10022",
-            "flow": "",
-            "password": "tr10022"
-          },
-          {
-            "email": "tr10031",
-            "flow": "",
-            "password": "tr10031"
-          },
-          {
-            "email": "tr10032",
-            "flow": "",
-            "password": "tr10032"
-          },
-          {
-            "email": "tr10041",
-            "flow": "",
-            "password": "tr10041"
-          },
-          {
-            "email": "tr10042",
-            "flow": "",
-            "password": "tr10042"
-          },
-          {
-            "email": "tr10051",
-            "flow": "",
-            "password": "tr10051"
-          },
-          {
-            "email": "tr10052",
-            "flow": "",
-            "password": "tr10052"
-          },
-          {
-            "email": "tr10061",
-            "flow": "",
-            "password": "tr10061"
-          },
-          {
-            "email": "tr10062",
-            "flow": "",
-            "password": "tr10062"
-          },
-          {
-            "email": "tr20011",
-            "flow": "",
-            "password": "tr20011"
-          },
-          {
-            "email": "tr20012",
-            "flow": "",
-            "password": "tr20012"
-          },
-          {
-            "email": "tr20021",
-            "flow": "",
-            "password": "tr20021"
-          },
-          {
-            "email": "tr20022",
-            "flow": "",
-            "password": "tr20022"
-          },
-          {
-            "email": "tr20031",
-            "flow": "",
-            "password": "tr20031"
-          },
-          {
-            "email": "tr20032",
-            "flow": "",
-            "password": "tr20032"
-          },
-          {
-            "email": "tr20041",
-            "flow": "",
-            "password": "tr20041"
-          },
-          {
-            "email": "tr20042",
-            "flow": "",
-            "password": "tr20042"
-          },
-          {
-            "email": "tr20051",
-            "flow": "",
-            "password": "tr20051"
-          },
-          {
-            "email": "tr20052",
-            "flow": "",
-            "password": "tr20052"
-          },
-          {
-            "email": "tr20061",
-            "flow": "",
-            "password": "tr20061"
-          },
-          {
-            "email": "tr20062",
-            "flow": "",
-            "password": "tr20062"
+            "email": "tr2",
+            "password": "tr2"
           }
         ],
         "fallbacks": []
       },
       "streamSettings": {
-        "grpcSettings": {
-          "authority": "",
-          "multiMode": false,
-          "serviceName": ""
-        },
-        "network": "grpc",
+        "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "alpn": [],
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
           "certificates": [
             {
               "buildChain": false,
@@ -1048,11 +381,18 @@
           "minVersion": "1.2",
           "rejectUnknownSni": false,
           "serverName": "www.bing.com"
+        },
+        "wsSettings": {
+          "acceptProxyProtocol": false,
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "",
+          "path": "/trojan"
         }
       },
-      "tag": "inbound-8900",
+      "tag": "inbound-9900",
       "sniffing": {
-        "enabled": true,
+        "enabled": false,
         "destOverride": [
           "http",
           "tls",
@@ -1067,666 +407,22 @@
         "refresh": 5,
         "concurrency": 3
       }
-    },
-    {
-      "listen": null,
-      "port": 9000,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "9000-DNS-WG入站-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10011,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10011-坑位1-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10012,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10012-坑位1-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10013,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10013-坑位1-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10021,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10021-坑位2-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10022,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10022-坑位2-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10023,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10023-坑位2-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10031,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10031-坑位3-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10032,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10032-坑位3-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10033,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10033-坑位3-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10041,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10041-坑位4-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10042,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10042-坑位4-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10043,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10043-坑位4-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10051,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10051-坑位5-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10052,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10052-坑位5-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10053,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10053-坑位5-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10061,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10061-坑位6-线路1-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10062,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10062-坑位6-线路2-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
-    },
-    {
-      "listen": null,
-      "port": 10063,
-      "protocol": "wireguard",
-      "settings": {
-        "mtu": 1420,
-        "secretKey": "SPObGco9NP/ztVlexp5sd0K9gN11wft/JkoUqYcMTHc=",
-        "peers": [
-          {
-            "privateKey": "+NRyBuYyDflw0hRpfZQRdyp1n92cpOXs0VPGekZIw24=",
-            "publicKey": "oO9CAC1qimPnbWxVF6z6EBgm1cD+dEaD+UAO7eojmW8=",
-            "allowedIPs": [
-              "10.7.0.2/32"
-            ],
-            "keepAlive": 0
-          }
-        ],
-        "kernelMode": false
-      },
-      "streamSettings": null,
-      "tag": "10063-坑位6-智能-",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic",
-          "fakedns"
-        ],
-        "metadataOnly": false,
-        "routeOnly": false
-      },
-      "allocate": null
     }
   ],
   "outbounds": [
     {
+      "tag": "direct",
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "UseIP"
-      },
-      "tag": "direct"
+        "domainStrategy": "AsIs",
+        "redirect": "",
+        "noises": []
+      }
     },
     {
+      "tag": "blocked",
       "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
+      "settings": {}
     }
   ],
   "transport": null,
@@ -1745,12 +441,12 @@
     }
   },
   "api": {
+    "tag": "api",
     "services": [
       "HandlerService",
       "LoggerService",
       "StatsService"
-    ],
-    "tag": "api"
+    ]
   },
   "stats": {},
   "reverse": null,
