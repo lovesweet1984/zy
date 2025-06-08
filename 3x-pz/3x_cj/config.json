@@ -101,7 +101,7 @@
       },
       "tag": "inbound-60100",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
@@ -170,7 +170,7 @@
       },
       "tag": "inbound-60200",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
@@ -239,7 +239,7 @@
       },
       "tag": "inbound-60300",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
@@ -277,7 +277,7 @@
       "streamSettings": null,
       "tag": "inbound-60400",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
@@ -311,7 +311,7 @@
       "streamSettings": null,
       "tag": "inbound-60500",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
@@ -342,7 +342,7 @@
         "ivCheck": false,
         "method": "aes-256-gcm",
         "network": "tcp,udp",
-        "password": "YVZ9bi3CkMKEMcOFViNOJljCqUEVJiDDtBvCox1rw7M2wonCqsKEwqnDmsOw"
+        "password": "wgrAeQMHcdqqRHy/885KF8sjqOj3TayAn5tTVnCgW/w="
       },
       "streamSettings": {
         "network": "tcp",
@@ -356,7 +356,7 @@
       },
       "tag": "inbound-60600",
       "sniffing": {
-        "enabled": false,
+        "enabled": true,
         "destOverride": [
           "http",
           "tls",
