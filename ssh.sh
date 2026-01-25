@@ -1,4 +1,4 @@
-#!/bin/bash
+1#!/bin/bash
 echo -e "开始安装常用软件"
 apt install -y curl
 apt install -y wget
